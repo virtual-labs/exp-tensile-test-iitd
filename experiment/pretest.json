@@ -2,7 +2,9 @@
 	"question": "1.This is a sample question:",
 	"answers": {
 		"a": "This is a sample answer A",
-		"b": "This is a sample answer B"
+		"b": "This is a sample answer B",
+		"c": "This is a sample answer C",
+		"d": "This is a sample answer D"
 	},
 	"correctAnswer": "a"
 }, {
