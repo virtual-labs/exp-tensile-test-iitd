@@ -2,7 +2,7 @@ Steel is the most used structural material for the construction of civil enginee
 
 <center>
 <br>
-  <img src="webimages/th1.png" style="height: 100px;">
+  <img src="webimages/th1.png" style="height: 450px;">
 <br>  
 A & A’ = Proportionality limit<br>
 B & B’ = Elastic Limit<br>
@@ -61,7 +61,7 @@ The figure following the symbol Fe indicate the specified minimum yield stress o
 
 <center>
 <br>
-  <img src="webimages/th2.png" style="height: 100px;">
+  <img src="webimages/th2.png" style="height: 200px;">
 <br>
 Figure: Transverse and Longitudinal rib
 </center>
@@ -74,7 +74,7 @@ where w = mass in g and L = length in mm.
 
 <center>
 <br>
-  <img src="webimages/th3.png" style="height: 100px;">
+  <img src="webimages/th3.png" style="height: 650px;">
 <br>
 </center>
 
