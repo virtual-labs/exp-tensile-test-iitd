@@ -5,7 +5,7 @@ Preparation of sample:
 
 <center>
 <br>
-  <img src="webimages/p1.png" style="height: 200px;">
+  <img src="webimages/p1.png" style="height: 300px;">
 <br>
 
 Figure: A series of gauge segment lines, main gauge segment including the neck is shown in red (source: https://doi.org/10.1002/suco.201800042)
