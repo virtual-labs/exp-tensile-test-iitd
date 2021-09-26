@@ -1,1 +1,1 @@
-### Behavior of steel rebar (reinforcement bars) under uniaxial tension
+### To determine the yield stress/proof stress, maximum stress, ductility for steel rebar under tension.
