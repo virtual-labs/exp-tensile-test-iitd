@@ -1,4 +1,4 @@
-Preparation of sample:
+#### Preparation of sample:
 1.  Determine the cross-sectional area, So, of the specimen. 
 2.  The test shall be carried out on the standard test pieces prepared in accordance with IS 1608, using a proportional gauge length. Lo=5.65√So, where Lo is the gauge length and So is the cross-sectional area of the test piece. Lo may rounded to the nearest multiple of 5 mm, provided that the difference between the calculated and marked gauge length is less than 10 % of Lo.Note that test pieces with a non-proportional gauge length, may be used; in this case, the elongation values shall be converted in accordance with IS 3803 (Part 1).
 3.  A series of overlapping gauge lengths as shown in the figure below separated by 5 or 10mm are marked on the specimen.The marks could not result in premature fracture.
@@ -11,9 +11,7 @@ Preparation of sample:
 Figure: A series of gauge segment lines, main gauge segment including the neck is shown in red (source: https://doi.org/10.1002/suco.201800042)
 </center>
 
-<strong>
-Testing:
-</strong>
+#### Testing:
 
 <ol>
   <li>
@@ -31,9 +29,8 @@ Testing:
 </ol>
 
 
-<strong>
-Observations & Calculations:
-</strong>
+#### Observations & Calculations:
+
 
 <table>
   <tr>
@@ -141,9 +138,9 @@ Observations & Calculations:
   </tr>
 </table>
 
-<strong>
-Results:
-</strong>
+
+#### Results:
+
 
 Yield stress (MPa, to nearest whole number):<br>
 Tensile strength:<br>
