@@ -1,1 +1,1 @@
-### Aim of the experiment
+### Behavior of steel rebar (reinforcement bars) under uniaxial tension
