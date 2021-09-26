@@ -80,7 +80,8 @@ where w = mass in g and L = length in mm.
 
 Test Condition: 23 °C ± 5 °C.<br>
 
-Apparatus, Materials:<br>
+#### Apparatus, Materials:
+
 Universal Testing Machine (UTM) with applicable tensile grips<br>
 Mechanical extensometer<br>
 Calipers<br>
