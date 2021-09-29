@@ -1425,84 +1425,84 @@ function addvarniar1(){
 
         setTimeout(function()
         {
-            document.getElementById("varniar2").style.animation="move_vc3 40s forwards";
+            document.getElementById("varniar2").style.animation="move_vc3 20s forwards";
             // document.getElementById("dash2").style.visibility="visible";
             setTimeout(function()
             {
                document.getElementById("dash2").style.visibility="visible"; 
-            },2000);
+            },1000);
             setTimeout(function()
             {
                document.getElementById("dash3").style.visibility="visible"; 
-            },4000);
+            },2000);
             setTimeout(function()
             {
                document.getElementById("dash4").style.visibility="visible"; 
-            },6000);
+            },3000);
             setTimeout(function()
             {
                document.getElementById("dash5").style.visibility="visible"; 
-            },8000);
+            },4000);
             setTimeout(function()
             {
                document.getElementById("dash6").style.visibility="visible"; 
-            },10000);
+            },5000);
             setTimeout(function()
             {
                document.getElementById("dash7").style.visibility="visible"; 
-            },12000);
+            },6000);
             setTimeout(function()
             {
                document.getElementById("dash8").style.visibility="visible"; 
-            },14000);
+            },7000);
             setTimeout(function()
             {
                document.getElementById("dash9").style.visibility="visible"; 
-            },16000);
+            },8000);
             setTimeout(function()
             {
                document.getElementById("dash10").style.visibility="visible"; 
-            },18000);
+            },9000);
             setTimeout(function()
             {
                document.getElementById("dash11").style.visibility="visible"; 
-            },20000);
+            },10000);
             setTimeout(function()
             {
                document.getElementById("dash12").style.visibility="visible"; 
-            },22000);
+            },11000);
             setTimeout(function()
             {
                document.getElementById("dash13").style.visibility="visible"; 
-            },24000);
+            },12000);
             setTimeout(function()
             {
                document.getElementById("dash14").style.visibility="visible"; 
-            },26000);
+            },13000);
             setTimeout(function()
             {
                document.getElementById("dash15").style.visibility="visible"; 
-            },28000);
+            },14000);
             setTimeout(function()
             {
                document.getElementById("dash16").style.visibility="visible"; 
-            },30000);
+            },15000);
             setTimeout(function()
             {
                document.getElementById("dash17").style.visibility="visible"; 
-            },32000);
+            },16000);
             setTimeout(function()
             {
                document.getElementById("dash18").style.visibility="visible"; 
-            },34000);
+            },17000);
             setTimeout(function()
             {
                document.getElementById("dash19").style.visibility="visible"; 
-            },36000);
+            },18000);
             setTimeout(function()
             {
                document.getElementById("dash20").style.visibility="visible"; 
-            },38000);
+            },19000);
 
             setTimeout(function()
             {
@@ -1512,7 +1512,7 @@ function addvarniar1(){
 
                 document.getElementById("arrowcubox3").style.visibility="visible";
                 document.getElementById("nextButton3").style.visibility="visible";
-            },40000);
+            },20000);
 
 
 
