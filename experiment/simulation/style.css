@@ -288,11 +288,13 @@ font-size: 20px;
 
 {
 
-	0% {left: 800px;}
+	0% {left: 800px;
+	}
 	
 	/*50% {top: 230px;}*/
 	
-	100% {left: 600px;}
+	100% {left: 600px;
+	}
 
 }
 
@@ -300,22 +302,18 @@ font-size: 20px;
 
 {
 
-	0% {left: 540px;}
-	
-	/*50% {top: 230px;}*/
-	
-	100% {left: 105px;}
+	0% {left: 540px; top: 175px; height: 95px;}
+
+	100% {left: 132px; top: 198px; height: 45px;} 
 
 }
 @-webkit-keyframes move_gripwithrod2
 
 {
 
-	0% {left: 600px;}
-	
-	/*50% {top: 230px;}*/
-	
-	100% {left: 162px;}
+	0% {left: 600px; top: 120px; height: 195px;}
+		
+	100% {left: 162px; top: 170px; height: 105px;}
 
 }
 
