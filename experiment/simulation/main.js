@@ -1535,6 +1535,12 @@ function addgrip1()
     document.getElementById("grip_mac").style.animation="move_grip2 2s forwards";
     document.getElementById("addgrip1").style.visibility="hidden";
     document.getElementById("addrebergrip1").style.visibility="visible";
+
+    setTimeout(function()
+    {
+        document.getElementById("gaugesize").style.visibility="visible";
+        document.getElementById("gaugesize2").style.visibility="visible";
+    },2000);
 }
 
 function addreber()
@@ -1546,6 +1552,10 @@ function addreber()
             {
                 document.getElementById("grip_reber_tb").style.visibility="visible";
                 document.getElementById("fitmachine_arrow2").style.visibility="visible";
+
+                document.getElementById("gaugesize").style.visibility="hidden";
+                document.getElementById("gaugesize2").style.visibility="hidden";
+
             },2000);
 
     document.getElementById("addvc_arrow2").style.visibility="hidden";
