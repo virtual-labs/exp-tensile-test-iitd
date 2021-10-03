@@ -1,18 +1,51 @@
 [{
-	"question": "1.This is a sample question:",
+	"question": "1. Which one of the following factors decreases the tensile strength?",
 	"answers": {
-		"a": "This is a sample answer A",
-		"b": "This is a sample answer B",
-		"c": "This is a sample answer C",
-		"d": "This is a sample answer D"
-	},
-	"correctAnswer": "a"
-}, {
-	"question": "<img src='images/8.PNG'><br>Identify the location of Secondary electron detector",
-	"answers": {
-		"a": "<img src='images/1b.png'>",
-		"b": "<img src='images/1a.png'>",
-		"c": "<img src='images/1c.PNG'>"
+		"a": "Cold working",
+		"b": "Alloying",
+		"c": "Temperature rise",
+		"d": "Grain refinement"
 	},
 	"correctAnswer": "c"
+}, {
+	"question": "2. Which one of the following, is not a unit of ultimate tensile strength?",
+	"answers": {
+		"a": "MPa",
+		"b": "N/m2",
+		"c": "Kg/m3",
+		"d": "psi"
+	},
+	"correctAnswer": "c"
+},
+
+{
+	"question": "3. Which of the following tensile property is dimensionless?",
+	"answers": {
+		"a": "Tensile stress",
+		"b": "Elastic modulus",
+		"c": "True strain",
+		"d": "Toughness"
+	},
+	"correctAnswer": "c"
+},
+
+{
+	"question": "4. What term is used for the ratio of lateral strain to linear strain?",
+	"answers": {
+		"a": "Bulk modulus",
+		"b": "Elastic modulus",
+		"c": "Shear strain",
+		"d": "Poisson’s ratio"
+	},
+	"correctAnswer": "d"
+},
+{
+	"question": "5. The maximum stress up to which stress is proportional to strain is known as ________",
+	"answers": {
+		"a": "Tensile stress",
+		"b": "Compressive stress",
+		"c": "Elastic limit",
+		"d": "Proportional limit"
+	},
+	"correctAnswer": "d"
 }]
