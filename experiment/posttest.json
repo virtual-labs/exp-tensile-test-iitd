@@ -1,16 +1,55 @@
 [{
-	"question": "1.This is a sample question:",
+	"question": "1. What is the elastic modulus of steel?",
 	"answers": {
-		"a": "This is a sample answer A",
-		"b": "This is a sample answer B"
+		"a": "69-79 GPa",
+		"b": "41-45 GPa",
+		"c": "190-217 GPa",
+		"d": "330-360 GPa"
+	},
+	"correctAnswer": "c"
+}, {
+	"question": "2. If a bar is doubled in length, what will be the strain induced?",
+	"answers": {
+		"a": "0.5",
+		"b": "1.0",
+		"c": "1.5",
+		"d": "2.0"
+	},
+	"correctAnswer": "b"
+}, {
+	"question": "3. During a tensile test on a specimen of 1 sqcm cross section, the maximum load observed was 8 tonnes and the area of cross section at neck was 0.5 sqcm. What is the engineering ultimate tensile strength of the specimen?",
+	"answers": {
+		"a": "4 tonnes / sqcm",
+		"b": "8 tonnes /sqcm",
+		"c": "16 tonnes / sqcm",
+		"d": "24 tonnes / sqcm"
+	},
+	"correctAnswer": "b"
+}, {
+	"question": "4. Ductility is indicated by _________",
+	"answers": {
+		"a": "Percentage elongation",
+		"b": "Percentage of expansion",
+		"c": "Poisson’s ratio",
+		"d": "Elasticity"
 	},
 	"correctAnswer": "a"
 }, {
-	"question": "<img src='images/8.PNG'><br>Identify the location of Secondary electron detector",
+	"question": "5. Hooke’s law holds good up to",
 	"answers": {
-		"a": "<img src='images/1b.png'>",
-		"b": "<img src='images/1a.png'>",
-		"c": "<img src='images/1c.PNG'>"
+		"a": "Yield point",
+		"b": "Limit of proportionality",
+		"c": "Breaking point",
+		"d": "Elastic limit"
 	},
-	"correctAnswer": "c"
+	"correctAnswer": "b"
+}, {
+	"question": "6. If the radius of wire stretched by a load is doubled, then its Young’s modulus will be",
+	"answers": {
+		"a": "Doubled",
+		"b": "Halved",
+		"c": "Become four times",
+		"d": "Remain unaffected"
+	},
+	"correctAnswer": "d"
 }]
