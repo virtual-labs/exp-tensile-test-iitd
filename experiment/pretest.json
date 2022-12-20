@@ -1,16 +1,40 @@
 [{
-	"question": "1.This is a sample question:",
+	"question": "1. What is minimum number of cross-sections recommended for calculation of S0 (S0 : original cross-sectional area of parallel length) ?",
 	"answers": {
-		"a": "This is a sample answer A",
-		"b": "This is a sample answer B"
+		"a": "1",
+		"b": "2",
+		"c": "3",
+		"d": "4"
 	},
 	"correctAnswer": "a"
 }, {
-	"question": "<img src='images/8.PNG'><br>Identify the location of Secondary electron detector",
+	"question": "2. Which Indian Standard (IS) code is adopted for the determination of mechanical properties of reinforcement bars under tensile testing?",
 	"answers": {
-		"a": "<img src='images/1b.png'>",
-		"b": "<img src='images/1a.png'>",
-		"c": "<img src='images/1c.PNG'>"
+		"a": "IS-456",
+		"b": "IS-1608",
+		"c": "IS-10262",
+		"d": "IS-516"
 	},
 	"correctAnswer": "c"
+},
+{
+	"question": "3. Which annex should be followed for cylindrical specimen of diameter > 4 mm",
+	"answers": {
+		"a": "A",
+		"b": "B",
+		"c": "C",
+		"d": "D"
+	},
+	"correctAnswer": "a"
+},
+
+{
+	"question": "4. For proportional test pieces, original gauge length (L0) is given by,(S0 : original cross-sectional area of parallel length)",
+	"answers": {
+		"a": "𝐿𝑜=5.65√2𝑆𝑜",
+		"b": "𝐿𝑜=11.3√𝑆𝑜",
+		"c": "𝐿𝑜=5√4𝑆𝑜𝜋",
+		"d": "𝐿𝑜=5√2𝑆𝑜𝜋"
+	},
+	"correctAnswer": "a"
 }]
