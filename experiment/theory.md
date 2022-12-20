@@ -45,31 +45,31 @@ Terms and definitions:
 
 Length between gauge length marks on the test piece measured at room temperature before the test.
 
-2. Total length ( Lt )
+2. Total length ( $L_t$ )
 
 Total length of test piece before the test.
 
-3. Total length after fracture ( LT )
+3. Total length after fracture ( $L_T$ )
 
 Total length of test piece after the rupture, at room temperature, the two pieces having been carefully fitted back together so that their axes lie in a straight line.
 
-4. Parallel length (Lc)
+4. Parallel length ( $L_c$ )
 
 Length of the parallel reduced section of the test piece.
 
-5. Chosen gauge Length (L0)
+5. Chosen gauge Length ( $L_0$ )
 
 It is the original gauge length rounded to nearest multiple of 5 mm.
 
-6. Final gauge length after fracture (LU)
+6. Final gauge length after fracture ( $L_U$ )
 
 Length between gauge length marks on the test piece measured after rupture, at room temperature, the two pieces having been carefully fitted back together so that their axes lie in a straight line.
 
-7. Nominal Diameter (d0)
+7. Nominal Diameter ( $d_0$ )
 
 The diameter of a plain round bar having the same mass per metre length as the deformed bar.
 
-8. Maximum force (Fm)
+8. Maximum force ( $F_m$ )
 
 Highest force that the test piece withstands during the test.
 
@@ -124,12 +124,143 @@ Nominal mass: The mass of the bar of nominal size and of density 0.00785 Kg/mm2 
 
 The values for the nominal cross-sectional area and nominal mass of individual bars/wires shall be as given in Table 1.
 
-//image of table 1
+<table>
+<thead>
+  <tr>
+    <th>&nbsp;&nbsp;&nbsp;<br>SI No.&nbsp;&nbsp;&nbsp;</th>
+    <th>&nbsp;&nbsp;&nbsp;<br>Nominal Size<br>&nbsp;&nbsp;&nbsp;<br>(mm)&nbsp;&nbsp;&nbsp;</th>
+    <th>&nbsp;&nbsp;&nbsp;<br>Cross-Sectional Area<br>&nbsp;&nbsp;&nbsp;<br>(mm2)&nbsp;&nbsp;&nbsp;</th>
+    <th>&nbsp;&nbsp;&nbsp;<br>Mass per metre<br>&nbsp;&nbsp;&nbsp;<br>(Kg)&nbsp;&nbsp;&nbsp;</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;<br>1&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>4&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>12.6&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>0.099&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;<br>2&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>5&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>19.6&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>0.154&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;<br>3&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>6&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>28.3&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>0.222&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;<br>4&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>8&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>50.3&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>0.395&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;<br>5&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>10&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>78.6&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>0.617&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;<br>6&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>12&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>113.1&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>0.888&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;<br>7&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>16&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>201.2&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>1.58&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;<br>8&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>20&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>314.3&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>2.47&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;<br>9&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>25&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>491.1&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>3.85&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;<br>10&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>28&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>615.8&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>4.83&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;<br>11&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>32&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>804.6&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>6.31&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;<br>12&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>36&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>1018.3&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>7.99&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;<br>13&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>40&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>1257.2&nbsp;&nbsp;&nbsp;</td>
+    <td>&nbsp;&nbsp;&nbsp;<br>9.86&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</tbody>
+</table>
+( Table 2 )
 
 
 The values of the Table1 are subjected to the Tolerance on the nominal mass as a function of nominal size is given in Table2.
 
-//image of table 2
+<table>
+<thead>
+  <tr>
+    <th>SI No.</th>
+    <th>Nominal Size (a)</th>
+    <th>Tolerance on the Nominal Mass, Percentage</th>
+    <th></th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td></td>
+    <td>mm</td>
+    <td>Batch</td>
+    <td>Individual Sample</td>
+    <td>Individual Sample for Coils Only</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>a &lt;= 10</td>
+    <td>±7</td>
+    <td>-8</td>
+    <td>±8</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>10&lt; a &lt;=16</td>
+    <td>±5</td>
+    <td>-6</td>
+    <td>±6</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>16 &lt; a</td>
+    <td>±3</td>
+    <td>-4</td>
+    <td>±4</td>
+  </tr>
+</tbody>
+</table>
+( Table 2 )
 
 <h3>Testing Rate</h3>
 
@@ -151,3 +282,36 @@ Hence used for calculating the upper yield point, this method is used.
 When the rebar is subject to uniaxial tensile loading, elongation of the specimen takes place in axial direction and hence reduction of cross-sectional area in transverse direction which is called necking. When the load is continuously applied, formation of small cavities takes place in the necked region which links up to form cracks on further applying of the load. Since the maximum shear stress is at 45° which results into the cup and cone failure.
 
 <img src="./images/failuretype.png">
+
+<h3>Apparatus:</h3>
+Universal Testing Machine (UTM) with applicable tensile grips; Mechanical extensometer; Callipers; Mechanical dividers; Machinist scale and Gauge length punch.
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Accuracy/Least count</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Universal Testing Machine</td>
+    <td>Conforming to</td>
+  </tr>
+  <tr>
+    <td>Cylindrical rebars</td>
+    <td>Length 800 ± 4 mm</td>
+  </tr>
+  <tr>
+    <td>Ruler</td>
+    <td>1 mm</td>
+  </tr>
+  <tr>
+    <td>Weighing device</td>
+    <td>1 gram</td>
+  </tr>
+  <tr>
+    <td>Temperature</td>
+    <td>23 °C ± 5 °C</td>
+  </tr>
+</tbody>
+</table>
