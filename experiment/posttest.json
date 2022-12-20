@@ -1,16 +1,49 @@
 [{
-	"question": "1.This is a sample question:",
+	"question": "1. for proportional test pieces what is the minimum value of original gauge length (L0) of the test piece being used?",
 	"answers": {
-		"a": "This is a sample answer A",
-		"b": "This is a sample answer B"
+		"a": "5 mm",
+		"b": "10 mm",
+		"c": "15 mm",
+		"d": "20 mm"
 	},
 	"correctAnswer": "a"
 }, {
-	"question": "<img src='images/8.PNG'><br>Identify the location of Secondary electron detector",
+	"question": "2. In case where test piece has no transition radii Parallel length Lc, free length between the grips, shall be greater than",
 	"answers": {
-		"a": "<img src='images/1b.png'>",
-		"b": "<img src='images/1a.png'>",
-		"c": "<img src='images/1c.PNG'>"
+		"a": "Lo",
+		"b": "2Lo",
+		"c": "3Lo",
+		"d": "4Lo"
 	},
-	"correctAnswer": "c"
+	"correctAnswer": "a"
+},
+{
+	"question": "3. Original gauge length (Lo) should be rounded to nearest multiple of",
+	"answers": {
+		"a": "0.1 mm",
+		"b": "0.5 mm",
+		"c": "5 mm",
+		"d": "10 mm"
+	},
+	"correctAnswer": "a"
+},
+{
+	"question": "4. Minimum transition radius between gripped ends and parallel length for cylindrical test piece shall be, d0 : diameter of parallel length",
+	"answers": {
+		"a": "0.25 d0",
+		"b": "0.5 d0",
+		"c": "0.75 d0",
+		"d": "d0"
+	},
+	"correctAnswer": "a"
+},
+{
+	"question": "5. For cylindrical test pieces, parallel length (Lc ) shall be at least equal to: ( L0 : original gauge length, d0 : original diameter of parallel length)",
+	"answers": {
+		"a": "Lo",
+		"b": "Lo + do/2",
+		"c": "Lo + do ",
+		"d": "Lo + 2do"
+	},
+	"correctAnswer": "a"
 }]
