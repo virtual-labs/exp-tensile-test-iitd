@@ -2,29 +2,29 @@ Steel is the most used structural material for the construction of civil enginee
 
 Mechanical tests for steel include tension, bending, hardness and impact. For structural steel and reinforcing bars, tensile test, a destructive material test, is the most important. Tensile test provides relevant information for evaluation of the tensile properties and for quality assurance purposes. One usually conducts a tensile test on a standard specimen of the material to obtain the stress-strain diagram of a material. The diagram representing the relation between stress and strain in a given material is an important characteristic of the material. Important basic properties, viz., the proportional limit, elastic limit, the yield strength, the ultimate stress, the elongation at fracture, young’s modulus, etc. can be obtained from the stress-strain diagram. An idealized stress strain curve for steel is shown in Figure 1. An axially loaded tension member exhibits an elastic range (a–b) ending at yielding (b), followed by yield plateau (b–c). In the yield plateau, the load almost remains constant as the elongation increases. On further loading, the material exhibits a smaller increase in tension due to reorientation of the crystal structure of the metal with elongation (c–d). This region is referred to as the strain hardening range. After reaching the ultimate load (d), the loading decreases as the elongation increases (d–e), until the specimen eventually fractures at (e). The region (d-e) is referred to as the necking range. Since ductile materials are strong in tension, the failure is caused by shear stresses. The direction of the shear makes an angle of 450 with the applied stress. Thus, the plane of failure is at 450 from the axis of the shaft, and the failure is known as cup and cone failure because of the fracture surface.
 
-<img src="./webimages/fig1.png">
-Figure 1: Engineering Stress-Strain Curve of metallic materials.
+<br><img src="./webimages/fig1.png"><br>
+Figure 1: Engineering Stress-Strain Curve of metallic materials.<br>
 
-<img src="./webimages/fig2.png">
-Figure 2: Cup and Cone Failure
+<img src="./webimages/fig2.png"><br>
+<br>Figure 2: Cup and Cone Failure<br>
 
 Some materials, such as cold formed steel, due to their specific microstructure, do not show a sharp yield point but rather they yield continuously. For such steels, the yield stress is always taken as the stress at which a line at 0.2 per cent strain, parallel to the elastic portion, intercepts the stress strain curve. This is shown in Figure 3.
 
-<img src="./webimages/fig3.png">
-Figure 3: Determination of yield strength by offset method.
+<br><img src="./webimages/fig3.png"><br>
+Figure 3: Determination of yield strength by offset method.<br>
 
 The following are the properties of steel determined from Stress-strain curve:
 <ul>
 <li>Proportional limit — It is the region in the stress-strain curve which obeys the Hooke’s Law. In this region, the ratio of stress with strain gives a constant called Young’s Modulus.</li>
-<li>Modulus of elasticity or Young’s Modulus, E — It is a measure of a material’s axial stiffness; it does not change with the type of steel and has the value of 2.5 × $10^5$ MPa.</li>
+<li>Modulus of elasticity or Young’s Modulus, E — It is a measure of a material’s axial stiffness; it does not change with the type of steel and has the value of 2.5 × 10<sup>5</sup> MPa.</li>
 <li>Elastic limit — It is the point in the graph up to which the material returns to its original position when the load acting on it is completely removed.</li>
-<li>Yield stress, $σ_y$ — It is the stress at which elongation first occurs in the test piece without increasing the load during the tensile test. In the case of steels with no such definite yield point, proof stress shall be applicable.</li>
+<li>Yield stress, σ<sub>y</sub> — It is the stress at which elongation first occurs in the test piece without increasing the load during the tensile test. In the case of steels with no such definite yield point, proof stress shall be applicable.</li>
 <li>0.2 percent proof stress — It is the stress at which a non-proportional elongation equal to 0.2 percent of the original gauge length takes place.</li>
-<li>Ultimate or tensile strength, $σ_u$ — It is the maximum load reached in a tensile test divided by the initial cross-sectional area. It is the largest value of stress that the material can support. Ideally, the yield stress and ultimate strength should be calculated based on reduced area of cross section, but it is not practical to determine reduced area of cross section at various stages of loading. Thus, this stress is also called the engineering stress.</li>
+<li>Ultimate or tensile strength, σ<sub>u</sub> — It is the maximum load reached in a tensile test divided by the initial cross-sectional area. It is the largest value of stress that the material can support. Ideally, the yield stress and ultimate strength should be calculated based on reduced area of cross section, but it is not practical to determine reduced area of cross section at various stages of loading. Thus, this stress is also called the engineering stress.</li>
 <li>Fracture Stress — It is the stress at which the failure of the material takes place.</li>
-<li>Percentage permanent elongation (after fracture): The amount of permanent strain from proportionality limit to the point of rupture or fracture is a measure of ductility. It is measured by computing the percentage elongation of the test specimen over the specified or standard gauge length. It is given by: Percentage permanent elongation = ( $L_u$ - $L_o$ )/ $L_o$ ×100
+<li>Percentage permanent elongation (after fracture): The amount of permanent strain from proportionality limit to the point of rupture or fracture is a measure of ductility. It is measured by computing the percentage elongation of the test specimen over the specified or standard gauge length. It is given by: Percentage permanent elongation = ( L<sub>u</sub> - L<sub>o</sub> )/ L<sub>o</sub> ×100
 
-where $L_o$ is the gauge length before application of force and $L_u$ is the gauge length after rupture of the test piece. The two pieces having been carefully fitted back together so that their axes lie in a straight line.</li>
+  where L<sub>o</sub> is the gauge length before application of force and L<sub>u</sub> is the gauge length after rupture of the test piece. The two pieces having been carefully fitted back together so that their axes lie in a straight line.</li>
 <li>Percentage Total Elongation at Maximum Force — It is the percentage elongation corresponding to the maximum load reached in a tensile test expressed as a percentage of the original gauge length. It is also termed as uniform elongation and is recorded before initiation of necking.</li>
 </ul>
 
@@ -203,9 +203,61 @@ Table 2: Nominal size and nominal mass of the reinforcement bars.
 
 <strong>Test Method</strong>
 <ol>
-<li><strong></strong></li>
-<li><strong></strong></li>
-<li><strong></strong></li>
-<li><strong></strong></li>
+<li><strong>Determining the effective cross-sectional area</strong><br>
+  For bar whose pattern of deformation is such that by visual inspection, the cross-sectional area is substantially uniform along the length of the bar/wire, the effective cross-sectional area shall be the gross sectional area determined as follows, using a bar/wire not less than 0.5 m in length:
+
+Gross cross-sectional area, in mm2 So= w/0.00785L
+
+where w = mass weighed to a precision of +0.5 percent, in kg
+
+L = length measured to a precision of +0.5 percent, in m.
+
+  The nominal Diameter (d<sub>0</sub>) is determined as the diameter of a plain round bar having the same mass per meter length as the deformed bar.</li>
+<li><strong>Determining the gauge length</strong><br>As a rule, test pieces with a proportional gauge length complying with the requirements L<sub>o</sub> = 5.65√So should be used for the tensile test, where L<sub>o</sub> is the gauge length and So is the effective cross-sectional area of the test piece. Note that test pieces with a non-proportional gauge length, other than 5.65 may be used in which case the elongation values shall be converted to 5.65 in accordance with IS 3803 (Part 1).</li>
+<li><strong>Loading rate</strong><br>For the tensile test, usually a strain-controlled test is adopted. This method is used when strain rate sensitive parameters are to be determined and to minimize the uncertainty of the test results. Strain rate value shall be equal to 0.00025 s<sup>-1</sup> with a relative tolerance of ± 20% .
+  <strong>Properties which can be determined using method A:</strong>Upper yield strength or proof strength, lower yield strength, percentage yield point extension, tensile strength, percentage elongation after fracture, percentage total extension at maximum force, percentage plastic extension at maximum force and percentage reduction in the area of the specimen can be determining using Method A.  </li>
+<li><strong>Estimation of mechanical properties</strong><br>The following are the terms and definitions which are used in the experiment:
+
+Total length (L<sub>T</sub>) — Total length of test piece before the test.
+
+Total length after fracture (L<sub>T</sub>) — Total length of test piece after the rupture, at room temperature, the two pieces having been carefully fitted back together so that their axes lie in a straight line.
+
+Original gauge length (L<sub>0</sub>) — Length between gauge length marks on the test piece measured at room temperature before the test.
+
+Final gauge length after fracture (L<sub>U</sub>) — Length between gauge length marks on the test piece measured after rupture, at room temperature, the two pieces having been carefully fitted back together so that their axes lie in a straight line. Percentage elongation after fracture is estimated as permanent elongation of the gauge length after fracture ( L<sub>U</sub> – L<sub>0</sub> ), expressed as a percentage of the original gauge length ( L<sub>0</sub> ).</li>
 
 </ol>
+
+<br>
+<img src="./webimages/fig4.png">
+<br>
+Figure 4: Specimen a) before fracture b) after fracture.
+<br>
+
+<strong>Apparatus:</strong>
+<table>
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Accuracy / Least Count</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Universal Testing Machine</td>
+    <td>Conforming to IS:1828 Part 1 ( 2015 )</td>
+  </tr>
+  <tr>
+    <td>Weighting Balance</td>
+    <td>1 gram</td>
+  </tr>
+  <tr>
+    <td>Ruler</td>
+    <td>1 mm</td>
+  </tr>
+  <tr>
+    <td>Extensometer </td>
+    <td>Conforming to ISO:9513 Class 1 ( 2012 )</td>
+  </tr>
+</tbody>
+</table>
