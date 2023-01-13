@@ -17,8 +17,7 @@
 	},
 	"correctAnswer": "a"
 },{
-	"question": "For proportional test pieces, original gauge length (L0) is given by,
-(S0 : original cross-sectional area of the specimen)",
+	"question": "For proportional test pieces, original gauge length (L0) is given by,(S0 : original cross-sectional area of the specimen)",
 	"answers": {
 		"a": "𝐿𝑜=5.65√2𝑆𝑜",
 		"b": "𝐿𝑜=11.3√2𝑆𝑜",
