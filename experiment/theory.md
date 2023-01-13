@@ -61,7 +61,7 @@ Table 1: Mechanical properties of high strength deformed bars.
 <tbody>
   <tr>
     <td>1</td>
-    <td>0.2% proof stress/ yield stress, Min N/mm2</td>
+    <td>0.2% proof stress/ yield stress, Min N/mm<sup>2</sup></td>
     <td>415</td>
     <td>415</td>
     <td>500</td>
@@ -84,13 +84,13 @@ Table 1: Mechanical properties of high strength deformed bars.
   <tr>
     <td>3</td>
     <td>Tensile strength, Min</td>
-    <td>10% more than actual yield stress but not less than 485 N/mm2</td>
-    <td>12% more than actual yield stress but not less than 500 N/mm2</td>
-    <td>8% more than actual yield stress but not less than 545 N/mm2</td>
-    <td>10% more than actual yield stress but not less than 565 N/mm2</td>
-    <td>6% more than actual yield stress but not less than 585 N/mm2</td>
-    <td>8% more than actual yield stress but not less than 600 N/mm2</td>
-    <td>6% more than actual yield stress but not less than 660 N/mm2</td>
+    <td>10% more than actual yield stress but not less than 485 N/mm<sup>2</sup></td>
+    <td>12% more than actual yield stress but not less than 500 N/mm<sup>2</sup></td>
+    <td>8% more than actual yield stress but not less than 545 N/mm<sup>2</sup></td>
+    <td>10% more than actual yield stress but not less than 565 N/mm<sup>2</sup></td>
+    <td>6% more than actual yield stress but not less than 585 N/mm<sup>2</sup></td>
+    <td>8% more than actual yield stress but not less than 600 N/mm<sup>2</sup></td>
+    <td>6% more than actual yield stress but not less than 660 N/mm<sup>2</sup></td>
   </tr>
   <tr>
     <td>4</td>
@@ -112,7 +112,7 @@ Table 2: Nominal size and nominal mass of the reinforcement bars.
   <tr>
     <th>S. No.</th>
     <th>Nominal Size (mm)</th>
-    <th>Cross-sectional area (mm2)</th>
+    <th>Cross-sectional area (mm<sup>2</sup>)</th>
     <th>Mass per meter (kg)</th>
   </tr>
 </thead>
@@ -206,7 +206,7 @@ Table 2: Nominal size and nominal mass of the reinforcement bars.
 <li><strong>Determining the effective cross-sectional area</strong><br>
   For bar whose pattern of deformation is such that by visual inspection, the cross-sectional area is substantially uniform along the length of the bar/wire, the effective cross-sectional area shall be the gross sectional area determined as follows, using a bar/wire not less than 0.5 m in length:
 
-Gross cross-sectional area, in mm2 So= w/0.00785L
+Gross cross-sectional area, in mm<sup>2</sup> So= w/0.00785L
 
 where w = mass weighed to a precision of +0.5 percent, in kg
 
