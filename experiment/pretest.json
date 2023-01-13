@@ -1,5 +1,5 @@
 [{
-	"question": "Which Indian Standard (IS) code is adopted for the determination of mechanical properties of reinforcement bars under tensile testing?",
+	"question": "1. Which Indian Standard (IS) code is adopted for the determination of mechanical properties of reinforcement bars under tensile testing?",
 	"answers": {
 		"a": "IS-456 (2021)",
 		"b": "IS-1608 (2022)",
@@ -8,7 +8,7 @@
 	},
 	"correctAnswer": "b"
 },{
-	"question": "In Fe415 the number 415 denotes the",
+	"question": "2. In Fe415 the number 415 denotes the",
 	"answers": {
 		"a": "Yield strength",
 		"b": "Ultimate strenght",
@@ -17,7 +17,7 @@
 	},
 	"correctAnswer": "a"
 },{
-	"question": "For proportional test pieces, original gauge length (L0) is given by,(S0 : original cross-sectional area of the specimen)",
+	"question": "3. For proportional test pieces, original gauge length (L0) is given by,(S0 : original cross-sectional area of the specimen)",
 	"answers": {
 		"a": "𝐿𝑜=5.65√2𝑆𝑜",
 		"b": "𝐿𝑜=11.3√2𝑆𝑜",
@@ -26,7 +26,7 @@
 	},
 	"correctAnswer": "c"
 },{
-	"question": "What is the strain value at 0.2% offset?",
+	"question": "4. What is the strain value at 0.2% offset?",
 	"answers": {
 		"a": "0.2",
 		"b": "0.02",
@@ -35,7 +35,7 @@
 	},
 	"correctAnswer": "c"
 },{
-	"question": "The density of rebars used for the calculation of the cross-sectional area in tensile test is",
+	"question": "5. The density of rebars used for the calculation of the cross-sectional area in tensile test is",
 	"answers": {
 		"a": "7.85 Kg/m3",
 		"b": "78.5 Kg/m3",
