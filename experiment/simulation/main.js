@@ -17,10 +17,68 @@ function navNext1()
 
         document.getElementById("canvas1").style.visibility="hidden";
 
+        document.getElementById("canvas1a").style.visibility="visible";//canvas2  
+
+
+
+}
+function navNext1a()
+
+{
+
+        document.getElementById("canvas1a").style.visibility="hidden";
+
         document.getElementById("canvas2").style.visibility="visible";//canvas2      
 
 }
 
+function navNext2a()
+
+{
+
+        document.getElementById("canvas2").style.visibility="hidden";
+
+        document.getElementById("canvas2a").style.visibility="visible";//canvas3
+
+        // document.getElementById("arrowcube1").style.visibility="visible";
+
+}
+
+function navNext2b()
+
+{
+
+        document.getElementById("canvas2a").style.visibility="hidden";
+
+        document.getElementById("canvas2b").style.visibility="visible";//canvas3
+
+        // document.getElementById("arrowcube1").style.visibility="visible";
+
+}
+
+function navNext2c()
+
+{
+
+        document.getElementById("canvas2b").style.visibility="hidden";
+
+        document.getElementById("canvas2c").style.visibility="visible";//canvas3
+
+        // document.getElementById("arrowcube1").style.visibility="visible";
+
+}
+
+function navNext2d()
+
+{
+
+        document.getElementById("canvas2c").style.visibility="hidden";
+
+        document.getElementById("canvas2d").style.visibility="visible";//canvas3
+
+        // document.getElementById("arrowcube1").style.visibility="visible";
+
+}
 
 
 function navNext2()
@@ -31,19 +89,40 @@ function navNext2()
 
         document.getElementById("canvas3").style.visibility="visible";//canvas3
 
-        document.getElementById("arrowcube1").style.visibility="visible";
+        // document.getElementById("arrowcube1").style.visibility="visible";
 
 }
 
-
-
-function navNext3()
+function navNext3a()
 
 {
 
         document.getElementById("canvas3").style.visibility="hidden";
 
-        document.getElementById("canvas4").style.visibility="visible";
+        document.getElementById("canvas3b").style.visibility="visible";//canvas3
+
+        // document.getElementById("arrowcube1").style.visibility="visible";
+
+}
+
+
+function navNext3c()
+
+{
+
+        document.getElementById("canvas3c").style.visibility="hidden";
+
+        document.getElementById("canvas3d").style.visibility="visible";
+
+        document.getElementById("movejoin1").style.animation="move_joinani 3s linear forwards";
+
+setTimeout(function()
+        { 
+            document.getElementById("break_img1").style.visibility="hidden";
+            document.getElementById("break_img2").style.visibility="visible";
+        },3500);
+
+        
 
         //Month Print
 //document.getElementById("demo01").innerHTML = logo.getMonth() + 1;
@@ -56,7 +135,40 @@ function navNext3()
 
 }
 
+function navNext3d()
 
+{
+
+        document.getElementById("canvas3d").style.visibility="hidden";
+
+        document.getElementById("canvas3e").style.visibility="visible";
+}
+
+
+function navNext3e()
+
+{
+
+        document.getElementById("canvas3e").style.visibility="hidden";
+
+        document.getElementById("canvas3f").style.visibility="visible";
+
+        var today = new Date();
+      var dd = today.getDate();
+      var mm = today.getMonth() + 1; //January is 0
+      var yyyy = today.getFullYear();
+
+      if (dd < 10) {
+        dd = '0' + dd;
+      }
+
+      if (mm < 10) {
+        mm = '0' + mm;
+      }
+
+      today = dd + '-' + mm + '-' + yyyy;
+      document.getElementById('date').innerHTML = today;
+}
 
 function navNext4()
 
@@ -303,6 +415,63 @@ else
 
 }
 
+var nq1=0;
+var nq2=0;
+var nq3=0;
+
+function calc1()
+{
+    nq1 = document.getElementById("csIn1").value;
+
+    if (nq1 == 110.4)
+    {
+        document.getElementById("csa1").style.visibility="visible";
+        document.getElementById("arw2b").style.visibility="visible";
+        document.getElementById("nb2b").style.visibility="visible";
+        document.getElementById("fillBox").innerHTML = "&nbsp;";
+    }
+    else
+    {
+        document.getElementById("fillBox").innerHTML = "Please Enter Correct Value = 110.4";
+        //alert("Wrong");
+    } 
+}
+
+function calc2()
+{
+    nq2 = document.getElementById("csIn2").value;
+
+    if (nq2 == 59.4)
+    {
+        document.getElementById("csa2").style.visibility="visible";
+        document.getElementById("arw2c").style.visibility="visible";
+        document.getElementById("nb2c").style.visibility="visible";
+        document.getElementById("fillBox2").innerHTML = "&nbsp;";
+    }
+    else
+    {
+        document.getElementById("fillBox2").innerHTML = "Please Enter Correct Value = 59.4";
+        //alert("Wrong");
+    } 
+}
+
+function calc3()
+{
+    nq3 = document.getElementById("csIn3").value;
+
+    if (nq3 == 60)
+    {
+        document.getElementById("csa3").style.visibility="visible";
+        document.getElementById("arw3c").style.visibility="visible";
+        document.getElementById("nb3c").style.visibility="visible";
+        document.getElementById("fillBox3").innerHTML = "&nbsp;";
+    }
+    else
+    {
+        document.getElementById("fillBox3").innerHTML = "Please Enter Correct Value = 60";
+        //alert("Wrong");
+    } 
+}
 
 function ageIn()
 
@@ -1322,6 +1491,277 @@ function submit11()
   
 
 }
+
+ // for mesurement bars
+
+function addbar1(){
+
+   
+document.getElementById("bar1").style.visibility="visible";
+
+document.getElementById("addbar1").style.visibility="hidden";
+document.getElementById("aradd_1").style.visibility="hidden";
+    setTimeout(function()
+
+    {
+    document.getElementById("step1a_a").style.visibility="hidden";
+    document.getElementById("step1a_b").style.visibility="visible";
+
+document.getElementById("addmeasuretape1").style.visibility="visible";
+document.getElementById("aradd_1").style.visibility="visible";
+    },1000);   
+    
+
+} 
+
+
+function addmeasuretape(){
+
+document.getElementById("addmeasuretape1").style.visibility="hidden";
+document.getElementById("aradd_1").style.visibility="hidden";
+
+document.getElementById("measure_tape1").style.visibility="visible";   
+document.getElementById("measure_tapeup2").style.visibility="visible";
+document.getElementById("measure_tape3").style.visibility="visible";
+
+
+
+document.getElementById("addbar1").style.visibility="hidden";
+    
+    document.getElementById("step1a_b").style.visibility="hidden";
+    document.getElementById("step1a_c").style.visibility="visible";
+    
+document.getElementById("measure_tb1").style.visibility="visible";
+
+document.getElementById("armea_2").style.visibility="visible";
+
+
+} 
+
+
+function measurelength()
+{
+
+    document.getElementById("measure_tb1").style.visibility="hidden";
+    document.getElementById("armea_2").style.visibility="hidden";
+
+    document.getElementById("measure_arrow1").style.visibility="visible";
+
+document.getElementById("measure_tapeup2").style.animation="mesure12 5s linear forwards";
+document.getElementById("measure_tape3").style.animation="mesure11 5s linear forwards";
+
+setTimeout(function()
+    {
+        document.getElementById("measure_arrow2").style.visibility="visible";
+
+        document.getElementById("bar_size1").style.visibility="visible";
+
+        setTimeout(function()
+            {
+                document.getElementById("arrowcubox1a").style.visibility="visible";
+                document.getElementById("nextButton1a").style.visibility="visible";
+            },1000);
+    },5000);
+} 
+
+
+function addmarker1()
+{
+    document.getElementById("addmarker1").style.visibility="hidden"; 
+    document.getElementById("arrowmarker1").style.visibility="hidden";
+    document.getElementById("usemarker").style.visibility="visible";
+    document.getElementById("armrkr_1").style.visibility="visible";
+    document.getElementById("usemarker_tb").style.visibility="visible";
+    
+    document.getElementById("step2d_a").style.visibility="hidden";
+    document.getElementById("step2d_b").style.visibility="visible";
+}
+
+function tickmarker1()
+{
+    document.getElementById("usemarker_tb").style.visibility="hidden";
+    document.getElementById("armrkr_1").style.visibility="hidden"; 
+   document.getElementById("usemarker").src="images/handmarker.png";
+    document.getElementById("usemarker").style.animation="movemarker1 linear 15s forwards";
+
+
+       document.getElementById("lmark_1").style.visibility="visible";       
+       document.getElementById("lmark_t1").style.visibility="visible";
+
+       document.getElementById("mark_1").style.visibility="visible";
+
+       document.getElementById("mark_2").style.visibility="visible";
+
+       document.getElementById("mark_3").style.visibility="visible";
+
+       document.getElementById("mark_4").style.visibility="visible";
+ 
+       document.getElementById("mark_5").style.visibility="visible";
+ 
+       document.getElementById("mark_6").style.visibility="visible";
+ 
+       document.getElementById("mark_7").style.visibility="visible";
+
+       document.getElementById("mark_8").style.visibility="visible";
+ 
+       document.getElementById("mark_9").style.visibility="visible";
+
+       document.getElementById("mark_10").style.visibility="visible";
+
+       document.getElementById("mark_11").style.visibility="visible";
+
+       document.getElementById("mark_12").style.visibility="visible";
+
+       document.getElementById("mark_13").style.visibility="visible";
+
+       document.getElementById("mark_14").style.visibility="visible";
+
+       document.getElementById("mark_15").style.visibility="visible";
+
+       document.getElementById("mark_16").style.visibility="visible";
+
+setTimeout(function()
+
+    {
+
+    document.getElementById("dash_1").style.visibility="visible";
+    
+    setTimeout(function()
+    {
+       document.getElementById("dash_2").style.visibility="visible";
+        
+    },800);
+    
+    setTimeout(function()
+    {
+       document.getElementById("dash_3").style.visibility="visible";
+    },1600);
+    
+    setTimeout(function()
+    {
+       document.getElementById("dash_4").style.visibility="visible"; 
+    },2300);
+    
+    setTimeout(function()
+    {
+       document.getElementById("dash_5").style.visibility="visible"; 
+    },3000);
+    
+    setTimeout(function()
+    {
+       document.getElementById("dash_6").style.visibility="visible";
+    },3800);
+    
+    setTimeout(function()
+    {
+       document.getElementById("dash_7").style.visibility="visible";
+    },4600);
+    
+    setTimeout(function()
+    {
+       document.getElementById("dash_8").style.visibility="visible";
+    },5200);
+    
+    setTimeout(function()
+    {
+       document.getElementById("dash_9").style.visibility="visible"; 
+    },6000);
+    
+    setTimeout(function()
+    {
+       document.getElementById("dash_10").style.visibility="visible";
+    },6800);
+    
+    setTimeout(function()
+    {
+       document.getElementById("dash_11").style.visibility="visible"; 
+    },7600);
+    
+    setTimeout(function()
+    {
+       document.getElementById("dash_12").style.visibility="visible"; 
+    },8400);
+    
+    setTimeout(function()
+    {
+       document.getElementById("dash_13").style.visibility="visible"; 
+    },9100);
+    
+    setTimeout(function()
+    {
+       document.getElementById("dash_14").style.visibility="visible"; 
+    },9900);
+    
+    setTimeout(function()
+    {
+       document.getElementById("dash_15").style.visibility="visible"; 
+    },10700);
+    
+    setTimeout(function()
+    {
+       document.getElementById("dash_16").style.visibility="visible"; 
+    },11500);
+    
+    setTimeout(function()
+    {
+       document.getElementById("dash_17").style.visibility="visible";
+
+    document.getElementById("arrowcubox2c").style.visibility="visible"; 
+    document.getElementById("nextButton2c").style.visibility="visible";
+    },12300);
+
+  setTimeout(function()
+    {  
+     
+setTimeout(function()
+    {
+      document.getElementById("markbig_1").style.visibility="visible";  
+    },500);
+setTimeout(function()
+    {
+      document.getElementById("markbig_2").style.visibility="visible";  
+    },1000);
+setTimeout(function()
+    {
+      document.getElementById("markbig_3").style.visibility="visible";  
+    },1500);
+setTimeout(function()
+    {
+      document.getElementById("markbig_4").style.visibility="visible";  
+    },2000);
+setTimeout(function()
+    {
+      document.getElementById("markbig_5").style.visibility="visible";
+      document.getElementById("lmark_2").style.visibility="visible";
+      document.getElementById("lmark_t2").style.visibility="visible";
+ 
+    },2500);
+    
+
+    },1000);
+ 
+ setTimeout(function()
+    {
+       document.getElementById("usemarker").src="images/marker.png";
+    },15100);
+
+
+
+
+
+
+
+
+
+
+
+
+    },1700);
+    
+    
+}
+
+
 // =====================Specimen 1===================
 
 function addpiler1(){
@@ -1352,12 +1792,12 @@ document.getElementById("rebertb1").style.visibility="visible";
 
     {
 
-    // document.getElementById("step2a").style.visibility="hidden";
-    // document.getElementById("step2b").style.visibility="visible";    
+    document.getElementById("step2a").style.visibility="hidden";
+    document.getElementById("step2b").style.visibility="visible";    
     // document.getElementById("addbeam1").style.visibility="visible";
     
     
-    },2000);
+    },1000);
 
 
 }
@@ -1378,11 +1818,11 @@ function movereber()
 
         document.getElementById("table1").style.visibility="visible";
         document.getElementById("table2").style.visibility="visible";
-        document.getElementById("table3").style.visibility="visible";
-        document.getElementById("table4").style.visibility="visible";
-        document.getElementById("table5").style.visibility="visible";
-        document.getElementById("table6").style.visibility="visible";
-        document.getElementById("table7").style.visibility="visible";
+        // document.getElementById("table3").style.visibility="visible";
+        // document.getElementById("table4").style.visibility="visible";
+        // document.getElementById("table5").style.visibility="visible";
+        // document.getElementById("table6").style.visibility="visible";
+        // document.getElementById("table7").style.visibility="visible";
 
         document.getElementById("arrowcubox2").style.visibility="visible";
         document.getElementById("nextButton2").style.visibility="visible";
@@ -1397,151 +1837,214 @@ function movereber()
 
 function addvarniar1(){
 
-    document.getElementById("varniar1").style.animation="move_vc1 2s forwards";
-    document.getElementById("varniar1").style.visibility="visible";
+    document.getElementById("vc11").style.animation="move_vc1 2s forwards";
+    document.getElementById("vc11").style.visibility="visible";
+    
 
     document.getElementById("addvc_arrow1").style.visibility="hidden";
     document.getElementById("addvc1").style.visibility="hidden";
     setTimeout(function()
 
     {
-    document.getElementById("varniar3").style.visibility="visible";
-    document.getElementById("varniar4").style.visibility="visible";
-    document.getElementById("varniar1").style.visibility="hidden";
-    document.getElementById("varniar4").style.animation="move_vc2 2s forwards";
-    // document.getElementById("step2b").style.visibility="hidden";
-    // document.getElementById("step2c").style.visibility="visible";    
-    // document.getElementById("transpiler2").style.visibility="visible";
-    // document.getElementById("arrowtrans2").style.visibility="visible";
-    setTimeout(function()
+    document.getElementById("vc33").style.visibility="visible";
+    document.getElementById("vc44").style.visibility="visible";
+    document.getElementById("vc11").style.visibility="hidden";
+    document.getElementById("arvcmea_1").style.visibility="visible";
 
-    {
-        document.getElementById("varniar2").style.visibility="visible";
-        document.getElementById("dash1").style.visibility="visible";
-        document.getElementById("varniar3").style.visibility="hidden";
-        document.getElementById("varniar4").style.visibility="hidden";
+document.getElementById("usevc_tb").style.visibility="visible";
+document.getElementById("step3d_a").style.visibility="hidden";
+document.getElementById("step3d_b").style.visibility="visible";
 
-        document.getElementById("sizetable").style.visibility="visible";
-
-        setTimeout(function()
-        {
-            document.getElementById("varniar2").style.animation="move_vc3 20s forwards";
-            // document.getElementById("dash2").style.visibility="visible";
-            setTimeout(function()
-            {
-               document.getElementById("dash2").style.visibility="visible"; 
-            },1000);
-            setTimeout(function()
-            {
-               document.getElementById("dash3").style.visibility="visible"; 
-            },2000);
-            setTimeout(function()
-            {
-               document.getElementById("dash4").style.visibility="visible"; 
-            },3000);
-            setTimeout(function()
-            {
-               document.getElementById("dash5").style.visibility="visible"; 
-            },4000);
-            setTimeout(function()
-            {
-               document.getElementById("dash6").style.visibility="visible"; 
-            },5000);
-            setTimeout(function()
-            {
-               document.getElementById("dash7").style.visibility="visible"; 
-            },6000);
-            setTimeout(function()
-            {
-               document.getElementById("dash8").style.visibility="visible"; 
-            },7000);
-            setTimeout(function()
-            {
-               document.getElementById("dash9").style.visibility="visible"; 
-            },8000);
-            setTimeout(function()
-            {
-               document.getElementById("dash10").style.visibility="visible"; 
-            },9000);
-            setTimeout(function()
-            {
-               document.getElementById("dash11").style.visibility="visible"; 
-            },10000);
-            setTimeout(function()
-            {
-               document.getElementById("dash12").style.visibility="visible"; 
-            },11000);
-            setTimeout(function()
-            {
-               document.getElementById("dash13").style.visibility="visible"; 
-            },12000);
-            setTimeout(function()
-            {
-               document.getElementById("dash14").style.visibility="visible"; 
-            },13000);
-            setTimeout(function()
-            {
-               document.getElementById("dash15").style.visibility="visible"; 
-            },14000);
-            setTimeout(function()
-            {
-               document.getElementById("dash16").style.visibility="visible"; 
-            },15000);
-            setTimeout(function()
-            {
-               document.getElementById("dash17").style.visibility="visible"; 
-            },16000);
-            setTimeout(function()
-            {
-               document.getElementById("dash18").style.visibility="visible"; 
-            },17000);
-            setTimeout(function()
-            {
-               document.getElementById("dash19").style.visibility="visible"; 
-            },18000);
-            setTimeout(function()
-            {
-               document.getElementById("dash20").style.visibility="visible"; 
-            },19000);
-
-            setTimeout(function()
-            {
-                document.getElementById("varniar2").style.visibility="hidden";
-                document.getElementById("varniar5").style.visibility="visible";
-                document.getElementById("varniar5").style.animation="move_vc4 2s forwards";
-
-                document.getElementById("arrowcubox3").style.visibility="visible";
-                document.getElementById("nextButton3").style.visibility="visible";
-            },20000);
-
-
-
-
-        },2000);
-
-
-
-
-    },2000);
     },2000);
 
 
 }
 
+function usevc1()
+{
+    document.getElementById("usevc_tb").style.visibility="hidden";
+    document.getElementById("arvcmea_1").style.visibility="hidden";
+    document.getElementById("vc44").style.animation="move_vc2 2s forwards";
+    setTimeout(function()
+    {
+        document.getElementById("vc44").src="images/varniar3.png";
+    },2000);
+
+    setTimeout(function()
+
+    {
+                document.getElementById("step3d_b").style.visibility="hidden";
+                document.getElementById("step3d_c").style.visibility="visible";
+                document.getElementById("usevc_tb2").style.visibility="visible";
+                document.getElementById("arvcmea_2").style.visibility="visible";
+            setTimeout(function()
+            {
+                // document.getElementById("varniar2").style.visibility="hidden";
+
+                
+
+                // document.getElementById("vc33").style.visibility="hidden";
+                // document.getElementById("vc44").style.visibility="hidden";
+
+                // document.getElementById("vc55").style.visibility="visible";
+                // document.getElementById("varniar5").style.animation="move_vc4 2s forwards";
+
+            },2000);
+
+    },2000);
+
+}
+
+
+
+function usevc2()
+{
+    document.getElementById("usevc_tb2").style.visibility="hidden";
+    document.getElementById("arvcmea_2").style.visibility="hidden";
+    document.getElementById("vc33").style.visibility="hidden";
+    document.getElementById("vc44").style.visibility="hidden";
+
+    document.getElementById("vc66").style.visibility="visible";
+    document.getElementById("vc77").style.visibility="visible";
+    document.getElementById("vc77").style.animation="move_vernc3 2s forwards";
+    
+    setTimeout(function()
+        {
+        document.getElementById("vc77").src="images/varniar37.png";
+
+
+                document.getElementById("arrowcubox3d").style.visibility="visible";
+                document.getElementById("nextButton3d").style.visibility="visible";
+        },2000);
+
+
+}
 
 function addgrip1()
 {
     document.getElementById("grip_mac").style.visibility="visible";
     document.getElementById("grip_mac").style.animation="move_grip2 2s forwards";
     document.getElementById("addgrip1").style.visibility="hidden";
-    document.getElementById("addrebergrip1").style.visibility="visible";
+    document.getElementById("addvc_arrow2").style.visibility="hidden";
+    // document.getElementById("addrebergrip1").style.visibility="visible";
 
     setTimeout(function()
     {
         document.getElementById("gaugesize").style.visibility="visible";
         document.getElementById("gaugesize2").style.visibility="visible";
+
+                document.getElementById("step3_c").style.visibility="hidden";
+                document.getElementById("step3_d").style.visibility="visible";
+                document.getElementById("grip_tb").style.visibility="visible";
     },2000);
 }
+
+function fitgrip(){
+
+                document.getElementById("grip_tb").style.visibility="hidden";
+
+                document.getElementById("gaugesize").style.visibility="hidden";
+                document.getElementById("gaugesize2").style.visibility="hidden";
+
+                document.getElementById("grip_mac").style.visibility="visible";
+                document.getElementById("grip_mac").style.animation="move_gripwithrod1 4s forwards";
+
+                setTimeout(function()
+                {
+                    document.getElementById("arrowcubox4").style.visibility="visible";
+                    document.getElementById("nextButton4").style.visibility="visible";
+                },2000);
+}
+
+function showgp1(){
+                
+                document.getElementById("turnon_machine").style.visibility="hidden";
+                document.getElementById("off_scr1").style.visibility="hidden";
+                document.getElementById("gp1").style.visibility="visible";
+                
+                document.getElementById("onmachine_arrow1").style.visibility="hidden";
+
+                document.getElementById("step3b_a").style.visibility="hidden";
+                document.getElementById("c7").style.visibility="hidden";
+                document.getElementById("st1").style.visibility="hidden";
+                document.getElementById("st2").style.visibility="visible";
+
+                document.getElementById("grph_arrow").style.visibility="visible";
+        
+        setTimeout(function()
+                {
+                    document.getElementById("step3b_b").style.visibility="visible";
+                    document.getElementById("removemeter_tb").style.visibility="visible";
+                    document.getElementById("removeextnso_arrow1").style.visibility="visible";
+                    document.getElementById("st2").style.visibility="hidden";
+                    document.getElementById("st3").style.visibility="visible";
+
+                    document.getElementById("gp1").style.visibility="hidden";
+                    document.getElementById("gp2").style.visibility="visible";
+
+                },6000);
+        }
+
+
+function showgp2(){
+
+                document.getElementById("stop_btn").style.visibility="hidden";
+                
+
+                document.getElementById("gp3").style.visibility="hidden";
+
+                document.getElementById("offmachine_arrow1").style.visibility="hidden";
+                
+                document.getElementById("gp4").style.visibility="visible";
+                document.getElementById("step3b_c").style.visibility="hidden";
+                // document.getElementById("reberbraked").src="images/br2up.png";
+                // document.getElementById("reberbraked2").style.visibility="visible";
+                // document.getElementById("st1").style.visibility="hidden";
+                // document.getElementById("st2").style.visibility="visible";
+        
+        setTimeout(function()
+                {
+                    document.getElementById("canvas3b").style.visibility="hidden";
+                    document.getElementById("canvas3c").style.visibility="visible";
+                },4000);
+        }
+
+function removeext1(){
+                document.getElementById("removemeter_tb").style.visibility="hidden";
+                // document.getElementById("gp1").style.visibility="hidden";
+                document.getElementById("removeextnso_arrow1").style.visibility="hidden";
+
+                document.getElementById("grip_mac2").style.animation="remove_grip3 4s linear forwards";
+                document.getElementById("step3b_b").style.visibility="hidden";
+                document.getElementById("c8").style.visibility="hidden";
+                // document.getElementById("st2").style.visibility="hidden";
+                // document.getElementById("st3").style.visibility="visible";
+            setTimeout(function()
+                {
+                    document.getElementById("gp2").style.visibility="hidden";
+                    document.getElementById("gp3").style.visibility="visible";
+                    
+                    setTimeout(function()
+                    {   
+                        document.getElementById("c9").style.visibility="hidden";
+                        document.getElementById("c10").style.visibility="visible";
+                        document.getElementById("st3").style.visibility="hidden";
+                        document.getElementById("st4").style.visibility="visible";
+                        // document.getElementById("zoom_brake").style.visibility="visible";
+
+                        document.getElementById("offmachine_arrow1").style.visibility="visible";
+
+                        document.getElementById("reberbraked").src="images/br2up.png";
+                        document.getElementById("reberbraked2").style.visibility="visible";
+
+                        document.getElementById("stop_btn").style.visibility="visible";
+                        document.getElementById("step3b_c").style.visibility="visible";
+                    },2000);
+
+                },4500);
+                // document.getElementById("gp1").style.visibility="hidden";
+
+        }
 
 function addreber()
 {
@@ -1553,9 +2056,12 @@ function addreber()
                 document.getElementById("grip_reber_tb").style.visibility="visible";
                 document.getElementById("fitmachine_arrow2").style.visibility="visible";
 
-                document.getElementById("gaugesize").style.visibility="hidden";
-                document.getElementById("gaugesize2").style.visibility="hidden";
+                
+                
+                document.getElementById("step3_a").style.visibility="hidden";
+                document.getElementById("step3_b").style.visibility="visible";
 
+                
             },2000);
 
     document.getElementById("addvc_arrow2").style.visibility="hidden";
@@ -1566,15 +2072,24 @@ function fitmachine()
 {
     document.getElementById("fitmachine_arrow2").style.visibility="hidden";
     document.getElementById("grip_reber_tb").style.visibility="hidden";
-    document.getElementById("grip_mac").style.visibility="visible";
-    document.getElementById("grip_mac").style.animation="move_gripwithrod1 4s forwards";
+
     document.getElementById("grip_reber").style.visibility="visible";
     document.getElementById("grip_reber").style.animation="move_gripwithrod2 4s forwards";
     
     setTimeout(function()
     {
-        document.getElementById("arrowcubox4").style.visibility="visible";
-        document.getElementById("nextButton4").style.visibility="visible";
+
+        document.getElementById("step3_b").style.visibility="hidden";
+        document.getElementById("step3_c").style.visibility="visible";
+        document.getElementById("c5").style.visibility="hidden";
+        document.getElementById("c6").style.visibility="visible";
+        document.getElementById("upstp1").style.visibility="hidden";
+                document.getElementById("upstp2").style.visibility="visible";
+
+        document.getElementById("addgrip1").style.visibility="visible";
+        document.getElementById("addvc_arrow2").style.visibility="visible";
+
+        
     },3000);
 }
 
