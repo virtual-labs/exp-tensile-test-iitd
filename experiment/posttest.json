@@ -1,0 +1,46 @@
+[{
+	"question": "1. Which of the following is the correct expression for the ultimate strength?",
+	"answers": {
+		"a": "𝑈𝑙𝑡𝑖𝑚𝑎𝑡𝑒 𝐿𝑜𝑎𝑑 / 𝐼𝑛𝑖𝑡𝑖𝑎𝑙 𝑐𝑟𝑜𝑠𝑠 𝑠𝑒𝑐𝑡𝑖𝑜𝑛𝑎𝑙 𝑎𝑟𝑒𝑎",
+		"b": "𝑈𝑙𝑡𝑖𝑚𝑎𝑡𝑒 𝐿𝑜𝑎𝑑 / 𝐸𝑓𝑓𝑒𝑐𝑡𝑖𝑣𝑒 𝑐𝑟𝑜𝑠𝑠 𝑠𝑒𝑐𝑡𝑖𝑜𝑛𝑎𝑙 𝑎𝑟𝑒𝑎",
+		"c": "𝑈𝑙𝑡𝑖𝑚𝑎𝑡𝑒 𝑠𝑡𝑟𝑒𝑠𝑠 / 𝐼𝑛𝑖𝑡𝑖𝑎𝑙 𝑐𝑟𝑜𝑠𝑠 𝑠𝑒𝑐𝑡𝑖𝑜𝑛𝑎𝑙 𝑎𝑟𝑒𝑎",
+		"d": "𝑈𝑙𝑡𝑖𝑚𝑎𝑡𝑒 𝑠𝑡𝑟𝑒𝑠𝑠 / 𝐸𝑓𝑓𝑒𝑐𝑡𝑖𝑣𝑒 𝑐𝑟𝑜𝑠𝑠 𝑠𝑒𝑐𝑡𝑖𝑜𝑛𝑎𝑙 𝑎𝑟𝑒𝑎"
+	},
+	"correctAnswer": "a"
+}, {
+	"question": "2. Which of the following is the correct expression for the percentage elongation after fracture? ( Lu- final gauge length (after fracture) , Lo- initial gauge length , LT- final total length , Lt- initial total length of the rebar",
+	"answers": {
+		"a": "(𝐿𝑢−𝐿𝑜 / 𝐿𝑜)×100",
+		"b": "(𝐿𝑢−𝐿𝑜 / 𝐿𝑢)×100",
+		"c": "(LT−𝐿𝑡 / 𝐿𝑡)×100",
+		"d": "(LT−𝐿𝑡 / 𝐿T)×100"
+	},
+	"correctAnswer": "a"
+},{
+	"question": "3. Which of the following property can’t be determined by a tensile test?",
+	"answers": {
+		"a": "Yield strain",
+		"b": "Tensile strength",
+		"c": "Compressive strength",
+		"d": "Limit of proportionality"
+	},
+	"correctAnswer": "c"
+},{
+	"question": "4. During a tensile test on a ductile material _____",
+	"answers": {
+		"a": "Nominal stress at fracture is higher than the ultimate stress",
+		"b": "True stress at fracture is higher than the ultimate stress",
+		"c": "True stress at fracture is same as the ultimate stress",
+		"d": "None of the above"
+	},
+	"correctAnswer": "b"
+},{
+	"question": "5. What will be the minimum diameter of a steel wire, which is used to raise a load of 4000N if the stress in the rod is not to exceed 95 MN/m2 ?",
+	"answers": {
+		"a": "6 mm",
+		"b": "6.4 mm",
+		"c": "7.3 mm",
+		"d": "7.4 mm"
+	},
+	"correctAnswer": "d"
+}]

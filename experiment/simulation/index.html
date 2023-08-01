@@ -1,13 +1,1969 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Plate Test</title>
+    
+
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript" src="jquerymin.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- BEGIN BASE CSS STYLE -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">
+
+    <link href="bootstrap.css" rel="stylesheet" type="text/css">
+
+    <link href="iitstyle.css" rel="stylesheet" type="text/css">
+    
+
+    <script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script>
+
+        var simsubscreennum=0;
+
+        var temp=0;
+
+    </script>
+<!--Graph Online Link -->
+  <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" rel="stylesheet" type="text/css" />
+  <link href='http://fonts.googleapis.com/css?family=Oxygen:300' rel='stylesheet' type='text/css'>
+  <meta charset="utf-8">
+<!--Graph Offline Link -->
+  <script src="graph_lib/chartist.min.js"></script>
+  <link href="graph_lib/chartist.min.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.ct-chart .ct-series.ct-series-a .ct-line 
+{
+  stroke: steelblue;
+  stroke-width: 4px;
+  stroke-linecap: round;
+}
+</style>
+
+
+
+
+</head>
+
+<body style="margin:0;" >
+<table align="center">
+<tr><td style="padding: 10px;">
+    <div id="simscreen" style="overflow: hidden;">
+
+        <div id="title"><h3>Tensile Strength of Reinforcement Bars</h3></div>
+
+
+
+         <!-- Scene 1 -->
+
+
+<div class="simsubscreen" id="canvas1" >
+
+            <!-- <strong class="incanvas" style="position: absolute; top: 20px; left: 10px;">STEP</strong> 
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 60px;">&nbsp;1&nbsp;</span></br>-->
+
+            <p class="incanvas" style="position: absolute; top: 25px; left: 10px;font-size:15px;"><strong>Objective:</strong></p>
+
+            <p class="incanvas" style="position: absolute; top: 55px; left: 10px;font-size:14px;">To determine the mechanical properties of reinforcement bars under tensile testing.</p></br>
+
+            <p class="incanvas" style="position: absolute; top: 85px; left: 10px;font-size:15px;"><strong>Apparatus Materials:</strong></p>
+
+            <p class="incanvas" style="position: absolute; top: 115px; left: 10px;font-size:14px;">	Universal Testing Machine (UTM), Mechanical extensometer, Vernier Callipers and Marking pen, Measuring Tape</p></br>
+
+            <img src="images/utm.png" style="position:absolute; left: 20px; top: 200px; height: 350px;" title="CTM" />
+
+            <img src="images/man.png" style="position: absolute; left: 640px; top: 220px; height: 310px;"title="Man" />
+
+
+<img src="images/reber1.png" style="height: 12px; width: 205px; position: absolute; top: 250px; left: 390px;">
+
+<!-- <img src="images/reber1.png" style="height: 12px; width: 205px; position: absolute; top: 300px; left: 390px;"> -->
+
+<!-- <img src="images/reber1.png" style="height: 12px; width: 205px; position: absolute; top: 350px; left: 390px;"> -->
+
+<span style="position: absolute; left: 450px; top: 230px; font-weight: bold; visibility: ;">Specimen</span>
+
+<!-- <span style="position: absolute; left: 450px; top: 280px; font-weight: bold; visibility: ;">Specimen 2</span> -->
+
+<!-- <span style="position: absolute; left: 450px; top: 330px; font-weight: bold; visibility: ;">Specimen 3</span> -->
+
+<!-- <img src="images/size.png" style="position: absolute; height: 11px; width: 205px; top: 380px; left: 390px;">  -->
+<!-- <span style="position: absolute; left: 460px; top: 400px; font-weight: bold; visibility: ;">1 Meter</span> -->
+
+
+            <p class="incanvas" style="font-size:18px; text-align: center; position:absolute; left: 410px; top: 330px;"><strong>Specimen type:<br>Bars</strong></p>
+
+            <input type="button" id="nextButton1" style="position:absolute; left:440px; top:410px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 5px; color: #FFF; padding-bottom: 5px" value="&nbsp;Start Here&nbsp;" onclick="navNext1()"/>
+
+        </div>
+
+<!-----
+        <div class="simsubscreen" id="canvas1a"  style="visibility:hidden;"></br>
+
+<strong class="incanvas">STEP</strong>
+
+            <span class="circlebg">&nbsp;1&nbsp;</span>
+<div id="transwhite" style="width: 700px; margin-right: 50px; margin-left: 50px;">
+            <p class="incanvas" style="font-size:15px;"><strong>Objective:</strong></p>
+
+            <p class="incanvas" style="font-size:14px;">To determine the yield stress/proof stress, maximum stress, ductility for steel rebar under tension.</p></br>
+	    
+            <p class="incanvas" style="font-size:15px;"><strong>Apparatus Materials:</strong></p>
+
+	        <p class="incanvas" style="font-size:14px;">
+	            Steel specimens: 3 pieces, each 1m long</br>
+            	Universal Testing Machine (UTM) with applicable tensile grips</br>
+            	Mechanical extensometer</br>
+            	Calipers</br>
+            	Mechanical dividers</br>
+            	Machinist scale</br>
+            	Gauge length punch and hammer</br>
+            </p></br>
+</div>
+            <-- <img src="images/sheet.png" style="position:absolute; left: 5px; top: 190px; height: 330px;" title="Plate" /> --
+
+           
+
+            <img src="images/man.png" style="position:absolute;left: 575px; top: 105px; height: 370px;" title="Man" />----->
+
+            <!-- <p class="incanvas" style="font-size:18px; text-align: center; position:absolute; left:400px; top:400px;"><strong>Specimen Type<br>Beam</strong></p> 
+
+
+
+            <input type="button" id="nextButton1" style="position:absolute; left: 625px; top: 495px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 5px; padding-bottom: 5px; color: #FFF;" value="&nbsp;Start Experiment&nbsp;" onclick="navNext1()"/>
+
+        </div>-->
+<!----------------------
+            <img style="position:absolute; left:730px; top:480px; cursor:pointer;" id="nextButton1" onClick="navNext1()" src="Next.png" />
+---------------------->
+        
+<!-- Step 1a -->
+
+<div class="simsubscreen" id="canvas1a" style="visibility:hidden;">
+
+
+            <strong class="incanvas" style="position: absolute; top: 20px; left: 10px;">STEP</strong>
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 60px;">&nbsp;1&nbsp;</span></br>
+<p class="incanvas" style="position: absolute; top: 20px; left: 90px; font-size:15px;"><strong>Calculation of cross-sectional area:</strong></p>
+ 
+	<span id="step1a_a" style="position:absolute;left: 100px; top: 55px;"><i class="fa fa-hand-o-right"></i> Click on add button to bring bars in the lab.</span>
+ 
+	<span id="step1a_b" style="position:absolute;left: 100px; top: 55px; visibility: hidden;"><i class="fa fa-hand-o-right"></i> Click on add button to bring measuring tape in the lab.</span>
+
+ 	<span id="step1a_c" style="position:absolute;left: 100px; top: 55px; visibility: hidden;"><i class="fa fa-hand-o-right"></i> Click on the measuring tape to measure the length of the specimen.</span>
+
+
+    <span class="blink_me" id="aradd_1" style="position:absolute; font-size: 30px; left: 650px; top: 22px; color: ; visibility: ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+    <span class="blink_me" id="armea_2" style="position:absolute; font-size: 30px; left: 200px; top: 300px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-up"></i></strong></span>
+
+    <input type="button" id="addbar1" style="position:absolute; left: 680px; top: 28px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 2px; color: #FFF; padding-bottom: 2px;" value="&nbsp;Add&nbsp;" onclick="addbar1()"/>
+
+    <input type="button" id="addmeasuretape1" style="position:absolute; left: 680px; top: 28px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 2px; color: #FFF; padding-bottom: 2px; visibility: hidden;" value="&nbsp;Add&nbsp;" onclick="addmeasuretape()"/>
+
+<img src="images/measurearrow.png" id="measure_arrow1" style="position: absolute; top: 200px; left: 85px; height: 55px; visibility: hidden;">
+
+<img src="images/measurearrow.png" id="measure_arrow2" style="position: absolute; top: 200px; left: 578px; height: 55px; visibility: hidden;">
+
+<img src="images/measure1.png" id="measure_tape1" style="height: 140px; width: 670px; position: absolute; top: 200px; left: 70px; visibility: hidden;">
+
+<img src="images/betweenlayer.png" id="measure_tapeup2" style="position: absolute; top: 200px; left: 250px; height: 140px; width: 500px; visibility: hidden;">
+
+<img src="images/measure2.png" id="measure_tape3" style="height: 85px; position: absolute; top: 225px; left: -170px; visibility: hidden;">
+
+<img src="images/transbox.png" id="measure_tb1" style="height: 140px; width: 220px; position: absolute; top: 200px; left: 100px; visibility: hidden;" onclick="measurelength()">
+
+<img src="images/bare_raber2.png" id="bar1" style="position: absolute; top: 180px; left: 88px; height: 22px; width: 510px; visibility:  hidden;">
+
+
+
+ <strong id="bar_size1" style="visibility: hidden; position: absolute;
+    left: 265px; top: 220px; text-align: center;">Total Length (m) = 0.805 m</strong>
+
+            <!--Blinking arrowcubox  -->
+            <span class="blink_me" id="arrowcubox1a" style="position:absolute; font-size: 30px; left: 710px; top: 510px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+             <img src="images/Next.png" id="nextButton1a" style="position:absolute; left:740px; top:505px; cursor:pointer; visibility: hidden;" onclick="navNext1a()" />
+
+</div>
+        <!-- Step 2 -->
+
+
+<div class="simsubscreen" id="canvas2" style="visibility:hidden;">
+
+
+            <strong class="incanvas" style="position: absolute; top: 20px; left: 10px;">STEP</strong>
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 60px;">&nbsp;1&nbsp;</span></br>
+<p class="incanvas" style="position: absolute; top: 20px; left: 90px; font-size:15px;"><strong>Calculation of cross-sectional area:</strong></p>
+ 
+	<span id="step2a" style="position:absolute;left: 100px; top: 55px;"><i class="fa fa-hand-o-right"></i> Click on add button to bring weighing machine in the lab.</span>
+ 
+	<span id="step2b" style="position:absolute;left: 100px; top: 55px; visibility: hidden;"><i class="fa fa-hand-o-right"></i> Click on the bar to measure the weight of the specimen.</span>
+
+ 	<span id="step2c" style="position:absolute;left: 100px; top: 55px; visibility: hidden;"><i class="fa fa-hand-o-right"></i> Click on the measuring tape to measure the length of the specimen.</span>
+
+
+ 	<!-- <span id="step2a" style="position:absolute;left: 100px; top: 30px;"><i class="fa fa-hand-o-right"></i> a) Click on the rebar to measure the weight of the specimen</span> -->
+
+    <!-- <span id="step2b" style="position:absolute;left: 100px; top: 30px; visibility: hidden;"><i class="fa fa-hand-o-right"></i> b) Click on add button to bring plate in the lab.</span> -->
+
+    <!-- <span id="step2c" style="position:absolute;left: 100px; top: 30px; visibility: hidden;"><i class="fa fa-hand-o-right"></i> c) Click on piller to arrange them in right position.</span> -->
+
+    <!-- <span id="step2d" style="position:absolute;left: 100px; top: 30px; visibility: hidden;"><i class="fa fa-hand-o-right"></i> d) Click on plate to put it on the pillers.</span> -->
+   
+    <span class="blink_me" id="arrowpiler1" style="position:absolute; font-size: 30px; left: 650px; top: 22px; color: ; visibility: ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+    <input type="button" id="addpiler1" style="position:absolute; left: 680px; top: 28px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 2px; color: #FFF; padding-bottom: 2px;" value="&nbsp;Add&nbsp;" onclick="addpiler1()"/>
+
+<img src="images/weight.png" id="weight2" style="position: absolute; top: 250px; left: 460px; height: 215px; width: 240px; visibility: hidden;">
+
+
+<img src="images/000.png" id="weighttext1" style="position: absolute; left: 535px; top: 384px; height: 15px; visibility: hidden;">
+
+<img src="images/875.png" id="weighttext2" style="position: absolute; left: 535px; top: 384px; height: 15px; visibility: hidden;">
+
+<img src="images/reber1.png" id="reber1" style="height: 15px; width: 226px; position: absolute; top: 480px; left: 470px; visibility: hidden;">
+
+<span class="blink_me" id="arrowbeam1" style="position:absolute; visibility: hidden; font-size: 30px; left: 570px; top: 440px;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+<img src="images/transbox.png" id="rebertb1" style="position: absolute; top: 474px; left: 460px; height: 30px; width: 246px; visibility: hidden;" onclick="movereber()">
+<!-- <span id="sizetext1" style="position: absolute; left: 150px; top: 150px; font-weight: bold; visibility: hidden;">Specimen 1</span> -->
+<!-- <img src="images/size.png" id="size1" style="height: 15px; width: 226px; position: absolute; top: 210px; left: 70px; visibility: hidden;">  -->
+<!-- <span id="sizetext11" style="position: absolute; left: 150px; top: 230px; font-weight: bold; visibility: hidden;">1 Meter</span> -->
+
+
+
+
+<table border="1" style="position: absolute; left: 60px; top: 140px; width: 350px; background-color: #FFF; font-weight: bold;">
+    <tr>
+        <td style="padding: 10px; width: 200px;">Total Length (m)</td>
+        <td style="padding: 10px; width: 150px;"><span id="table1" style="visibility:  ;">0.805</span></td>
+    </tr>
+    <tr>
+        <td style="padding: 10px;">Weight (Kg)</td>
+        <td style="padding: 10px;"><span id="table2" style="visibility: hidden;">0.698</span></td>
+    </tr>
+    <!-- <tr> 
+        <td style="padding: 10px;">Density</td>
+        <td style="padding: 10px;"><span id="table3" style="visibility: hidden;">7850 Kg/m<sup>3</sup></span></td>
+    </tr>
+    <tr>
+        <td style="padding: 10px;">Area of cross section, So</td>
+        <td style="padding: 10px;"><span id="table4" style="visibility: hidden;">111.5 mm<sup>2</sup></span></td>
+    </tr>
+    <tr>
+        <td style="padding: 10px;">Effective diameter, d</td>
+        <td style="padding: 10px;"><span id="table5" style="visibility: hidden;">11.92 mm</span></td>
+    </tr>
+    <tr>
+        <td style="padding: 10px;">Gauge length</td>
+        <td style="padding: 10px;"><span id="table6" style="visibility: hidden;">59.66 mm</span></td>
+    </tr>
+    <tr>
+        <td style="padding: 10px;">Chosen Gauge Length, Lo</td>
+        <td style="padding: 10px;"><span id="table7" style="visibility: hidden;">60 mm</span></td>
+    </tr>-->
+</table>
+<!-- <span id="sizetext2" style="position: absolute; left: 380px; top: 150px; font-weight: bold; visibility: hidden;">Specimen 2</span> -->
+<!-- <img src="images/size.png" id="size2" style="height: 15px; width: 226px; position: absolute; top: 210px; left: 300px; visibility: hidden;">  -->
+<!-- <span id="sizetext22" style="position: absolute; left: 380px; top: 230px; font-weight: bold; visibility: hidden;">1 Meter</span> -->
+
+<!-- <img src="images/reber1.png" id="reber3" style="height: 15px; width: 226px; position: absolute; top: 180px; left: 530px; visibility: hidden;"> -->
+
+<!-- <span id="sizetext3" style="position: absolute; left: 610px; top: 150px; font-weight: bold; visibility: hidden;">Specimen 3</span> -->
+<!-- <img src="images/size.png" id="size3" style="height: 15px; width: 226px; position: absolute; top: 210px; left: 530px; visibility: hidden;">  -->
+<!-- <span id="sizetext33" style="position: absolute; left: 610px; top: 230px; font-weight: bold; visibility: hidden;">1 Meter</span>  -->
+
+
+ 
+
+
+    <!-- weight.png -->
+<!-- <img src="images/handmarker.png" id="marker1" style="height: 60px; position: absolute; top: 250px; left: 0px; visibility: hidden;">          -->
+            <!--Blinking arrowcubox  -->
+            <span class="blink_me" id="arrowcubox2" style="position:absolute; font-size: 30px; left: 710px; top: 510px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+             <img src="images/Next.png" id="nextButton2" style="position:absolute; left:740px; top:505px; cursor:pointer; visibility: hidden;" onclick="navNext2a()" />
+
+
+
+        </div>
+
+<!-- Step 2a -->
+
+
+
+        <div class="simsubscreen" id="canvas2a" style="visibility:hidden;"><br>
+
+        <strong class="incanvas" style="position: absolute; top: 20px; left: 10px;">STEP</strong>
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 60px;">&nbsp;1&nbsp;</span></br>
+<p class="incanvas" style="position: absolute; top: 20px; left: 90px; font-size:15px;"><strong>Calculation of cross-sectional area:</strong></p>
+ 
+	<span id="step3a" style="position:absolute;left: 100px; top: 55px;"><i class="fa fa-hand-o-right"></i> Calculate the cross-sectional area of bar using below formula.</span>
+
+<img src="images/S0_formula.png" id="" style="position: absolute; height: 40px; top: 100px;
+    left: 160px; visibility:  ;">
+
+  <strong style=" position: absolute; left: 375px; top: 110px;">weight (kg) and L (m)</strong>
+
+<img src="images/S0_formula2.png" id="" style="position: absolute; height: 40px; top: 200px;
+    left: 160px; visibility:  ;">
+
+<img src="images/S0_formulaul.png" id="" style="position: absolute; height: 10px;
+    width: 107px;
+    top: 226px;
+    left: 202px; visibility:  ;">
+
+<strong style=" position: absolute; left: 310px; top: 210px;">mm<sup>2</sup></strong> 
+<strong style=" position: absolute; left: 210px; top: 210px; color: red">110.4</strong> 
+
+<table border="1" style="position: absolute; left: 400px; top: 180px; width: 350px; background-color: #FFF; font-weight: bold;">
+    <tr>
+        <td style="padding: 10px; width: 200px;">Total Length (m)</td>
+        <td style="padding: 10px; width: 150px;">0.805</td>
+    </tr>
+    <tr>
+        <td style="padding: 10px;">Weight (Kg)</td>
+        <td style="padding: 10px;">0.698</td>
+    </tr>
+    <tr>
+        <td style="padding: 10px;">Cross-sectional area (mm<sup>2</sup>)</td>
+        <td style="padding: 10px;"><span id="csa1"  style="visibility: hidden;">110.4</span></td>
+    </tr>
+</table>
+
+<input id="csIn1" type="number" style="position: absolute; left: 205px; top: 205px; width: 100px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px; border: none; outline: none;">
+
+<span style="position: absolute; left: 155px; top: 305px; color: red;" id="fillBox"></span>             
+
+<input class="incanvas" type="button" name="Submit" value="Submit" style="position: absolute; left: 195px; top: 245px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" onclick="calc1()"/>
+
+            <!--Blinking arrowcubox  -->
+            <span class="blink_me" id="arw2b" style="position:absolute; font-size: 30px; left: 710px; top: 510px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+             <img src="images/Next.png" id="nb2b" style="position:absolute; left:740px; top:505px; cursor:pointer; visibility: hidden;" onclick="navNext2b()">
+</div>
+
+
+<!-- Step 2b -->
+
+        <div class="simsubscreen" id="canvas2b" style="visibility:hidden;"><br>
+
+        <strong class="incanvas" style="position: absolute; top: 20px; left: 10px;">STEP</strong>
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 60px;">&nbsp;2&nbsp;</span></br>
+<p class="incanvas" style="position: absolute; top: 20px; left: 90px; font-size:15px;"><strong>Calculation of gauge length:</strong></p>
+ 
+	<span id="step3a" style="position:absolute;left: 100px; top: 55px;"><i class="fa fa-hand-o-right"></i> For proportional Test pieces, original gauge length &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; , So in mm<sup>2</sup> </span>
+
+<img src="images/S0_formula3.png" id="" style="position: absolute; height: 20px; top: 53px; left: 440px; visibility:  ;">
+
+  <!-- <strong style=" position: absolute; left: 375px; top: 110px;">weight (kg) and L (m)</strong> -->
+<img src="images/S0_formulaul.png" id="" style="position: absolute; height: 10px;
+    width: 107px;
+    top: 226px;
+    left: 202px; visibility:  ;">
+
+<img src="images/S0_formula4.png" id="" style="position: absolute; height: 28px; top: 202px;
+    left: 160px; visibility:  ;">
+
+<strong style=" position: absolute; left: 310px; top: 210px;">mm</strong> 
+<strong style=" position: absolute; left: 218px; top: 210px; color: red">59.4</strong> 
+
+<table border="1" style="position: absolute; left: 400px; top: 180px; width: 350px; background-color: #FFF; font-weight: bold;">
+    <tr>
+        <td style="padding: 10px; width: 200px;">Total Length (m)</td>
+        <td style="padding: 10px; width: 150px;">0.805</td>
+    </tr>
+    <tr>
+        <td style="padding: 10px;">Weight (Kg)</td>
+        <td style="padding: 10px;">0.698</td>
+    </tr>
+    <tr>
+        <td style="padding: 10px;">Cross-sectional area (mm<sup>2</sup>)</td>
+        <td style="padding: 10px;">110.4</td>
+    </tr>
+    <tr>
+        <td style="padding: 10px;">Gauge Length (mm)</td>
+        <td style="padding: 10px;"><span id="csa2"  style="visibility: hidden;">59.4</span></td>
+    </tr>
+</table>
+
+<input id="csIn2" type="number" style="position: absolute; left: 205px; top: 205px; width: 100px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px; border: none; outline: none;">
+ 
+<span style="position: absolute; left: 155px; top: 305px; color: red;" id="fillBox2"></span>             
+
+<input class="incanvas" type="button" name="Submit" value="Submit" style="position: absolute; left: 195px; top: 245px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" onclick="calc2()"/>
+
+            <!--Blinking arrowcubox  -->
+            <span class="blink_me" id="arw2c" style="position:absolute; font-size: 30px; left: 710px; top: 510px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+             <img src="images/Next.png" id="nb2c" style="position:absolute; left:740px; top:505px; cursor:pointer; visibility: hidden;" onclick="navNext2c()">
+</div>
+
+
+
+<!-- Step 2c -->
+
+        <div class="simsubscreen" id="canvas2c" style="visibility:hidden;"><br>
+
+        <strong class="incanvas" style="position: absolute; top: 20px; left: 10px;">STEP</strong>
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 60px;">&nbsp;3&nbsp;</span></br>
+<p class="incanvas" style="position: absolute; top: 20px; left: 90px; font-size:15px;"><strong>Choose gauge length which is rounded to nearest multiple of 5 mm of the original gauge length.</strong></p>
+ 
+
+<strong style=" position: absolute; left: 40px;
+    top: 206px;">Chosen gauge length L<sub>o</sub> = </strong> 
+<!-- <strong style=" position: absolute; left: 218px; top: 210px; color: red">59.4</strong>  -->
+
+<strong style=" position: absolute; left: 310px; top: 206px;">mm</strong>
+
+<table border="1" style="position: absolute; left: 400px; top: 180px; width: 350px; background-color: #FFF; font-weight: bold;">
+    <tr>
+        <td style="padding: 10px; width: 200px;">Total Length (m)</td>
+        <td style="padding: 10px; width: 150px;">0.805</td>
+    </tr>
+    <tr>
+        <td style="padding: 10px;">Weight (Kg)</td>
+        <td style="padding: 10px;">0.698</td>
+    </tr>
+    <tr>
+        <td style="padding: 10px;">Cross-sectional area (mm<sup>2</sup>)</td>
+        <td style="padding: 10px;">110.4</td>
+    </tr>
+    <tr>
+        <td style="padding: 10px;">Gauge Length (mm)</td>
+        <td style="padding: 10px;">59.4</td>
+    </tr>
+    <tr>
+        <td style="padding: 10px;">Chosen Gauge Length (mm)</td>
+        <td style="padding: 10px;"><span id="csa3" style="visibility: hidden;">60</span></td>
+    </tr>
+</table>
+
+<img src="images/S0_formulaul.png" id="" style="position: absolute; height: 10px;
+    width: 107px;
+    top: 226px;
+    left: 202px; visibility:  ;">
+
+<input id="csIn3" type="number" style="position: absolute; left: 205px; top: 205px; width: 100px; border: 1px solid #000; padding-top: 2px; padding-bottom: 2px; border: none; outline: none;">
+
+<span style="position: absolute; left: 155px; top: 305px; color: red;" id="fillBox3"></span>             
+
+<input class="incanvas" type="button" name="Submit" value="Submit" style="position: absolute; left: 195px; top: 245px; width: 100px; padding-top: 5px; padding-bottom: 5px; background-color: #2150a0; color: #FFF;" onclick="calc3()"/>
+
+            <!--Blinking arrowcubox  -->
+            <span class="blink_me" id="arw3c" style="position:absolute; font-size: 30px; left: 710px; top: 510px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+             <img src="images/Next.png" id="nb3c" style="position:absolute; left:740px; top:505px; cursor:pointer; visibility: hidden;" onclick="navNext2d()">
+</div>
+
+
+
+<!-- Step 2d -->
+
+<div class="simsubscreen" id="canvas2d" style="visibility:hidden;">
+
+
+            <strong class="incanvas" style="position: absolute; top: 20px; left: 10px;">STEP</strong>
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 60px;">&nbsp;4&nbsp;</span></br>
+<p class="incanvas" style="position: absolute; top: 20px; left: 90px; font-size:15px;"><strong>Mark the specimen at the continuous interval of Lo/2 or Lo/3:</strong></p>
+ 
+	<span id="step2d_a" style="position:absolute;left: 100px; top: 55px;"><i class="fa fa-hand-o-right"></i> Click on the add button to add marker.</span>
+ 
+	<span id="step2d_b" style="position:absolute;left: 100px; top: 55px; visibility: hidden;"><i class="fa fa-hand-o-right"></i> Click on the marker to mark the specimen at an interval of Lo/2 = 30 mm.</span>
+
+    <span class="blink_me" id="arrowmarker1" style="position:absolute; font-size: 30px; left: 650px; top: 22px; color: ; visibility: ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+    <span class="blink_me" id="armrkr_1" style="position:absolute; font-size: 30px; left: 270px; top: 380px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-up"></i></strong></span>
+
+    <input type="button" id="addmarker1" style="position:absolute; left: 680px; top: 28px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 2px; color: #FFF; padding-bottom: 2px;" value="&nbsp;Add&nbsp;" onclick="addmarker1()"/>
+
+<img src="images/laerrow.png" id="lmark_1" style="position: absolute; top: 148px;
+    left: 95px;
+    height: 20px; visibility: hidden;">
+<img src="images/laerrow2.png" id="lmark_2" style="position: absolute; top: 123px; left: 430px;
+    height: 20px; visibility: hidden;">
+<strong id="lmark_t1" style="position: absolute; top: 139px; left: 48px; visibility: hidden;">30 mm</strong>
+<strong id="lmark_t2" style="position: absolute; top: 115px; left: 460px; visibility: hidden;">60 mm</strong>
+
+<img src="images/bare_raber2.png" id=" " style="position: absolute; top: 180px; left: 88px; height: 22px; width: 510px; visibility:  ;">
+
+<strong id=" " style="visibility:  ; position: absolute;
+    left: 265px; top: 220px; text-align: center;">Total Length (m) = 0.805 m</strong>
+
+<img src="images/dashblack.png" id="dash_1" style="position: absolute; top: 180px; left: 96px; height: 22px; width: 10px; visibility: hidden;">
+<img src="images/redsize.png" id="mark_1" style="position: absolute; top: 165px; left: 102px; height: 10px; width: 30px; visibility: hidden;">
+ 
+<img src="images/dashblack.png" id="dash_2" style="position: absolute; top: 180px; left: 126px; height: 22px; width: 10px; visibility: hidden;">
+<img src="images/redsize.png" id="mark_2" style="position: absolute; top: 165px; left: 132px; height: 10px; width: 30px; visibility: hidden;">
+ 
+<img src="images/dashblack.png" id="dash_3" style="position: absolute; top: 180px; left: 156px; height: 22px; width: 10px; visibility: hidden;">
+<img src="images/redsize.png" id="mark_3" style="position: absolute; top: 165px; left: 162px; height: 10px; width: 30px; visibility: hidden;">
+ 
+<img src="images/dashblack.png" id="dash_4" style="position: absolute; top: 180px; left: 186px; height: 22px; width: 10px; visibility: hidden;">
+<img src="images/redsize.png" id="mark_4" style="position: absolute; top: 165px; left: 192px; height: 10px; width: 30px; visibility: hidden;">
+ 
+<img src="images/dashblack.png" id="dash_5" style="position: absolute; top: 180px; left: 216px; height: 22px; width: 10px; visibility: hidden;">
+<img src="images/redsize.png" id="mark_5" style="position: absolute; top: 165px; left: 222px; height: 10px; width: 30px; visibility: hidden;">
+ 
+<img src="images/dashblack.png" id="dash_6" style="position: absolute; top: 180px; left: 246px; height: 22px; width: 10px; visibility: hidden;">
+<img src="images/redsize.png" id="mark_6" style="position: absolute; top: 165px; left: 252px; height: 10px; width: 30px; visibility: hidden;">
+ 
+<img src="images/dashblack.png" id="dash_7" style="position: absolute; top: 180px; left: 276px; height: 22px; width: 10px; visibility: hidden;">
+<img src="images/redsize.png" id="mark_7" style="position: absolute; top: 165px; left: 282px; height: 10px; width: 30px; visibility: hidden;">
+ 
+<img src="images/dashblack.png" id="dash_8" style="position: absolute; top: 180px; left: 306px; height: 22px; width: 10px; visibility: hidden;">
+<img src="images/redsize.png" id="mark_8" style="position: absolute; top: 165px; left: 312px; height: 10px; width: 30px; visibility: hidden;">
+ 
+<img src="images/dashblack.png" id="dash_9" style="position: absolute; top: 180px; left: 336px; height: 22px; width: 10px; visibility: hidden;">
+<img src="images/redsize.png" id="mark_9" style="position: absolute; top: 165px; left: 342px; height: 10px; width: 30px; visibility: hidden;">
+ 
+<img src="images/dashblack.png" id="dash_10" style="position: absolute; top: 180px; left: 366px; height: 22px; width: 10px; visibility: hidden;">
+<img src="images/redsize.png" id="mark_10" style="position: absolute; top: 165px; left: 372px; height: 10px; width: 30px; visibility: hidden;">
+ 
+<img src="images/dashblack.png" id="dash_11" style="position: absolute; top: 180px; left: 396px; height: 22px; width: 10px; visibility: hidden;">
+<img src="images/redsize.png" id="mark_11" style="position: absolute; top: 165px; left: 402px; height: 10px; width: 30px; visibility: hidden;">
+ 
+<img src="images/dashblack.png" id="dash_12" style="position: absolute; top: 180px; left: 426px; height: 22px; width: 10px; visibility: hidden;">
+<img src="images/redsize.png" id="mark_12" style="position: absolute; top: 165px; left: 432px; height: 10px; width: 30px; visibility: hidden;">
+ 
+<img src="images/dashblack.png" id="dash_13" style="position: absolute; top: 180px; left: 456px; height: 22px; width: 10px; visibility: hidden;">
+<img src="images/redsize.png" id="mark_13" style="position: absolute; top: 165px; left: 462px; height: 10px; width: 30px; visibility: hidden;">
+ 
+<img src="images/dashblack.png" id="dash_14" style="position: absolute; top: 180px; left: 486px; height: 22px; width: 10px; visibility: hidden;">
+<img src="images/redsize.png" id="mark_14" style="position: absolute; top: 165px; left: 492px; height: 10px; width: 30px; visibility: hidden;">
+ 
+<img src="images/dashblack.png" id="dash_15" style="position: absolute; top: 180px; left: 516px; height: 22px; width: 10px; visibility: hidden;">
+<img src="images/redsize.png" id="mark_15" style="position: absolute; top: 165px; left: 522px; height: 10px; width: 30px; visibility: hidden;">
+ 
+<img src="images/dashblack.png" id="dash_16" style="position: absolute; top: 180px; left: 546px; height: 22px; width: 10px; visibility: hidden;">
+<img src="images/redsize.png" id="mark_16" style="position: absolute; top: 165px; left: 552px; height: 10px; width: 30px; visibility: hidden;">
+ 
+<img src="images/dashblack.png" id="dash_17" style="position: absolute; top: 180px; left: 576px; height: 22px; width: 10px; visibility: hidden;">
+
+<img src="images/redsize.png" id="markbig_1" style="position: absolute; top: 140px; left: 162px; height: 7px; width: 60px; visibility: hidden;">
+
+<img src="images/redsize.png" id="markbig_2" style="position: absolute; top: 140px; left: 222px; height: 7px; width: 60px; visibility: hidden;">
+
+<img src="images/redsize.png" id="markbig_3" style="position: absolute; top: 140px; left: 282px; height: 7px; width: 60px; visibility: hidden;">
+
+<img src="images/redsize.png" id="markbig_4" style="position: absolute; top: 140px; left: 342px; height: 7px; width: 60px; visibility: hidden;"> 
+
+<img src="images/redsize.png" id="markbig_5" style="position: absolute; top: 140px; left: 402px; height: 7px; width: 60px; visibility: hidden;">
+<!-- <img src="images/dashblack.png" id="dash_19" style="position: absolute; top: 180px; left: 636px; height: 22px; width: 10px; visibility:  ;"> -->
+<!-- <img src="images/dashblack.png" id="dash_20" style="position: absolute; top: 180px; left: 666px; height: 22px; width: 10px; visibility:  ;"> -->
+
+
+<table border="1" style="position: absolute; left: 500px; top: 250px; width: 250px; background-color: #FFF; font-weight: bold;">
+	<tr>
+	    <td style="padding: 10px; width: 200px;">Total Length (m)</td>
+	    <td style="padding: 10px; width: 150px;">0.805</td>
+	</tr>
+    <tr>
+        <td style="padding: 10px;">Weight (Kg)</td>
+        <td style="padding: 10px;">0.698</td>
+    </tr>
+    <tr>
+        <td style="padding: 10px;">Cross-sectional area (mm<sup>2</sup>)</td>
+        <td style="padding: 10px;">110.4</td>
+    </tr>
+    <tr>
+        <td style="padding: 10px;">Gauge Length (mm)</td>
+        <td style="padding: 10px;">59.4</td>
+    </tr>
+    <tr>
+        <td style="padding: 10px;">Chosen Gauge Length (mm)</td>
+        <td style="padding: 10px;">60</td>
+    </tr>
+</table>
+
+<img src="images/marker.png" id="usemarker" style="position: absolute; top: 350px; left: 250px; height: 80px; visibility: hidden;">
+
+<img src="images/transbox.png" id="usemarker_tb" style="position: absolute; top: 350px; left: 250px; height: 80px; visibility: hidden;" onclick="tickmarker1()">
+
+            <!--Blinking arrowcubox  -->
+            <span class="blink_me" id="arrowcubox2c" style="position:absolute; font-size: 30px; left: 710px; top: 510px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+             <img src="images/Next.png" id="nextButton2c" style="position:absolute; left:740px; top:505px; cursor:pointer; visibility: hidden;" onclick="navNext2()" />
+
+</div>
+
+
+        <!-- Step 4 -->
+
+
+
+        <div class="simsubscreen" id="canvas3" style="visibility:hidden;">
+
+<strong class="incanvas" style="position: absolute; top: 20px; left: 10px;">STEP</strong>
+			
+			<span id="c6" class="circlebg" style="position: absolute; top: 25px; left: 60px;">&nbsp;6&nbsp;</span></br>
+            <span id="c5" class="circlebg" style="position: absolute; top: 25px; left: 60px;">&nbsp;5&nbsp;</span></br>
+
+<p class="incanvas" id="upstp1" style="position: absolute; top: 20px; left: 90px; font-size:15px;"><strong>Insert the specimen in the UTM such that the load is axially applied on the specimen.</strong></p>
+
+<p class="incanvas" id="upstp2" style="position: absolute; top: 20px; left: 90px; font-size:15px; visibility: hidden;"><strong>Attach the extensometer to the specimen.</strong></p>
+<!-- <p class="incanvas" id="upstp2" style="position: absolute; top: 20px; left: 90px; font-size:15px; visibility: hidden;"><strong></strong></p>  -->
+	<span id="step3_a" style="position:absolute;left: 100px; top: 55px;"><i class="fa fa-hand-o-right"></i> Click on the add button to add rebar.</span>
+
+	<span id="step3_b" style="position:absolute;left: 100px; top: 55px; visibility: hidden;"><i class="fa fa-hand-o-right"></i> Click on the rebar to insert it on the specimen.</span>
+
+	<span id="step3_c" style="position:absolute;left: 100px; top: 55px; visibility: hidden;"><i class="fa fa-hand-o-right"></i> Click on the add button to add extensometer.</span>
+
+	<span id="step3_d" style="position:absolute;left: 100px; top: 55px; visibility: hidden;"><i class="fa fa-hand-o-right"></i> Click on the extensometer to attach it on the specimen.</span>
+
+    <span class="blink_me" id="addvc_arrow2" style="position:absolute; font-size: 30px; left: 660px; top: 52px; color: ; visibility: ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+    <input type="button" id="addgrip1" style="position:absolute; left: 690px; top: 60px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 2px; color: #FFF; padding-bottom: 2px; visibility: hidden;" value="&nbsp;Add&nbsp;" onclick="addgrip1()"/>
+
+    <input type="button" id="addrebergrip1" style="position:absolute; left: 690px; top: 60px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 2px; color: #FFF; padding-bottom: 2px; visibility: ;" value="&nbsp;Add&nbsp;" onclick="addreber()"/>
+
+
+    <img src="images/utm.png" style="position: absolute; left: 25px;
+    top: 80px;
+    height: 480px;">
+
+    <img src="images/size.png" id="gaugesize" style="visibility: hidden; position: absolute;
+    left: 485px;
+    top: 219px;
+    height: 10px; transform: rotate(90deg);">
+
+	<img src="images/off_screen.png" id="" style="position: absolute;
+    left: 360px;
+    top: 271px;
+    height: 50px;
+    width: 81px; visibility: ;">
+
+    <strong id="gaugesize2" style="visibility: hidden; position: absolute;
+    left: 425px;
+    top: 205px; text-align: center;">50 mm<br>(Gauge Length)</strong>
+
+    <img src="images/grip.png" id="grip_mac" style="visibility: hidden; position: absolute;
+    left: 100px;
+    top: 175px;
+    height: 95px;">
+
+    <img src="images/bare_reber_marked.png" id="grip_reber" style="visibility: hidden; position: absolute; left: 100px;
+    top: 120px;
+    height: 195px; ">
+
+    <span class="blink_me" id="fitmachine_arrow2" style="position:absolute; font-size: 30px; left: 620px; top: 200px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+    <img src="images/transbox.png" id="grip_reber_tb" style="visibility: hidden; position: absolute; left: 525px; top: 170px; height: 105px; " onclick="fitmachine()">
+
+    <img src="images/transbox.png" id="grip_tb" style="visibility: hidden; position: absolute; left: 525px; top: 170px; height: 105px; " onclick="fitgrip()">
+
+            <span class="blink_me" id="arrowcubox4" style="position:absolute; font-size: 30px; left: 710px; top: 510px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+             <img src="images/Next.png" id="nextButton4" style="position:absolute; left:740px; top:505px; cursor:pointer; visibility: hidden;" onclick="navNext3a()" />
+
+         </div>
+
+
+        <!-- Step 3b -->
+
+        <div class="simsubscreen" id="canvas3b" style="visibility:hidden;">
+
+<strong class="incanvas" style="position: absolute; top: 20px; left: 10px;">STEP</strong>
+			<span id="c10" class="circlebg" style="position: absolute; top: 25px; left: 60px; visibility: hidden;">&nbsp;10&nbsp;</span>
+			<span id="c9" class="circlebg" style="position: absolute; top: 25px; left: 60px;">&nbsp;9&nbsp;</span>
+			<span id="c8" class="circlebg" style="position: absolute; top: 25px; left: 60px;">&nbsp;8&nbsp;</span>
+            <span id="c7" class="circlebg" style="position: absolute; top: 25px; left: 60px;">&nbsp;7&nbsp;</span></br>
+
+<p class="incanvas" id="st1" style="position: absolute; top: 20px; left: 90px; font-size:15px;"><strong>Start the Universal Testing Machine</strong></p>
+
+<p class="incanvas" id="st2" style="position: absolute; top: 20px; left: 90px; font-size:15px; visibility: hidden;"><strong>Record simultaneously the readings of load from the UTM and elongation from the extensometer.</strong></p>
+
+<p class="incanvas" id="st3" style="position: absolute; top: 20px; left: 90px; font-size:15px; visibility: hidden;"><strong>Remove the extensometer carefully close to the ultimate strength.</strong></p>
+
+<p class="incanvas" id="st4" style="position: absolute; top: 20px; left: 90px; font-size:15px; visibility: hidden;"><strong>This maximum reading of load in stress strain curve corresponds to the Ultimate load.</strong></p>
+
+	<span id="step3b_a" style="position:absolute; left: 100px; top: 55px;"><i class="fa fa-hand-o-right"></i> Click on the start button to start the UTM.</span>
+
+	<span id="step3b_b" style="position:absolute; left: 100px; top: 55px; visibility: hidden;"><i class="fa fa-hand-o-right"></i> Click on the extensometer to remove it.</span>
+
+	<span id="step3b_c" style="position:absolute; left: 100px; top: 55px; visibility: hidden;"><i class="fa fa-hand-o-right"></i> Click on stop button to stop the UTM.</span>
+
+	<span id="step3_d" style="position:absolute; left: 100px; top: 55px; visibility: hidden;"><i class="fa fa-hand-o-right"></i> Click on the extensometer to insert it in the UTM.</span>
+
+
+
+
+    <img src="images/utm.png" style="position: absolute; left: 15px;
+    top: 160px;
+    height: 365px;">
+
+	<img src="images/arrow.png" id="grph_arrow" style="position: absolute; left: 285px;
+    top: 232px;
+    height: 60px;
+    transform: rotate(320deg); visibility: hidden;">
+
+	<img src="images/transbox.png" style="position: absolute;
+    left: 234px;
+    top: 377px;
+    height: 7px;
+    border-radius: 50px;
+    border: 3px solid #00ff25;">
+
+
+	<img src="images/off_screen.png" id="off_scr1" style="position: absolute;
+    left: 268px;
+    top: 305px;
+    height: 39px;
+    width: 63px; visibility: ;">
+
+
+	<img src="images/transbox.png" style="position: absolute;
+    left: 226px;
+    top: 377px;
+    height: 7px;
+    border-radius: 50px;
+    border: 3px solid red;">
+
+ 
+
+    <img src="images/grip.png" id="grip_mac2" style="visibility:  ; position: absolute;
+    left: 100px;
+    top: 252px;
+    height: 29px;">
+
+    <img src="images/bare_reber_marked.png" id="reberbraked" style="position: absolute; left: 118px; top: 222px; height: 85px;">
+
+    <img src="images/br1bottom.png" id="reberbraked2" style="position: absolute; left: 118px; top: 222px; height: 85px; visibility: hidden;">
+
+	<img src="images/brakezoom.png" id="zoom_brake" style="position: absolute;
+    left: 50px;
+    top: 202px;
+    height: 145px;
+    cursor: pointer; visibility: hidden;" >
+
+<img src="images/Picture2.png" id="gp1" style="position: absolute; left: 420px;
+    top: 135px;
+    height: 225px; visibility: hidden;">
+
+<img src="images/Picture3.png" id="gp2" style="position: absolute; left: 420px;
+    top: 135px;
+    height: 225px; visibility: hidden;">
+
+<img src="images/Picture4.png" id="gp3" style="position: absolute; left: 420px;
+    top: 135px;
+    height: 225px; visibility: hidden;">
+
+<img src="images/Picture5.png" id="gp4" style="position: absolute; left: 420px;
+    top: 135px;
+    height: 225px; visibility: hidden;">
+
+<span class="blink_me" id="onmachine_arrow1" style="position:absolute; font-size: 30px; left: 223px;
+    top: 385px; color: ; visibility:  ;"><strong><i class="fa fa-arrow-up"></i></strong></span>
+
+<span class="blink_me" id="removeextnso_arrow1" style="position:absolute; font-size: 30px; left: 125px;
+    top: 244px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+<span class="blink_me" id="offmachine_arrow1" style="position:absolute; font-size: 30px; left: 215px;
+    top: 385px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-up"></i></strong></span>
+
+
+	<img src="images/transbox.png" id="turnon_machine" style="position: absolute;
+    left: 230px;
+    top: 372px;
+    height: 16px;
+    cursor: pointer;" onclick="showgp1()">
+
+	<img src="images/transbox.png" id="stop_btn" style="position: absolute;
+    left: 222px;
+    top: 372px;
+    height: 16px;
+    cursor: pointer; visibility: hidden;" onclick="showgp2()">
+
+	<img src="images/transbox.png" id="removemeter_tb" style="position: absolute;
+    left: 90px;
+    top: 242px;
+    height: 45px;
+    cursor: pointer; visibility: hidden;" onclick="removeext1()">
+
+    <span class="blink_me" id="fitmachine_arrow2" style="position:absolute; font-size: 30px; left: 620px; top: 200px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span>
+
+    <img src="images/transbox.png" id="grip_reber_tb" style="visibility: hidden; position: absolute; left: 525px; top: 170px; height: 105px; " onclick="fitmachine()">
+
+    <img src="images/transbox.png" id="grip_tb" style="visibility: hidden; position: absolute; left: 525px; top: 170px; height: 105px; " onclick="fitgrip()">
+<!-- 
+            <span class="blink_me" id="arrowcubox4" style="position:absolute; font-size: 30px; left: 710px; top: 510px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+             <img src="images/Next.png" id="nextButton4" style="position:absolute; left:740px; top:505px; cursor:pointer; visibility: hidden;" onclick="navNext4()" /> -->
+
+</div>
+
+
+        <!-- Step 3c -->
+
+        <div class="simsubscreen" id="canvas3c" style="visibility:hidden;">
+
+<!-- <strong class="incanvas" style="position: absolute; top: 20px; left: 10px;">STEP</strong> -->
+			<!-- <span class="circlebg" style="position: absolute; top: 25px; left: 60px; visibility: hidden;">&nbsp;10&nbsp;</span> -->
+			<!-- <span class="circlebg" style="position: absolute; top: 25px; left: 60px;">&nbsp;10&nbsp;</span> -->
+<p class="incanvas" style="position: absolute; top: 20px; left: 90px; font-size:15px;"><strong>Calculations</strong></p>
+
+    <img src="images/Picture6.png" style="position: absolute; left: 80px; top: 85px; height: 280px;">
+
+<p class="incanvas" style="position: absolute; top: 400px; left: 90px; font-size:15px;"><strong>
+Reading at Yield Point = 480.84 MPa<br>
+(From 0.2% offset method)<br>
+Reading at Ultimate Strength Point = 600.62 MPa</strong></p>
+
+            <span class="blink_me" id="arrowcubox4" style="position:absolute; font-size: 30px; left: 710px; top: 510px; color: ; visibility: ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+             <img src="images/Next.png" id="nextButton4" style="position:absolute; left:740px; top:505px; cursor:pointer; visibility:  ;" onclick="navNext3c()" />
+
+         </div>
+
+
+
+        <!-- Step 3d -->
+
+        <div class="simsubscreen" id="canvas3d" style="visibility:hidden;">
+
+<strong class="incanvas" style="position: absolute; top: 20px; left: 10px;">STEP</strong>
+			<span class="circlebg" style="position: absolute; top: 25px; left: 60px;">&nbsp;11&nbsp;</span>
+
+<p class="incanvas" style="position: absolute; top: 20px; left: 90px; font-size:15px;"><strong>Fit the two pieces together so that their axes lie in a straight line. 
+</strong></p>
+
+	<span id="step3d_a" style="position:absolute; left: 100px; top: 55px;"><i class="fa fa-hand-o-right"></i> Click on add button to add vernier calliper.</span>
+
+	<span id="step3d_b" style="position:absolute; left: 100px; top: 55px; visibility: hidden;"><i class="fa fa-hand-o-right"></i> Click on the vernier calliper to measure the final gauge length of the specimen.</span>
+
+	<span id="step3d_c" style="position:absolute; left: 100px; top: 55px; visibility: hidden;"><i class="fa fa-hand-o-right"></i> Click on vernier calliper to measure the minimum diameter of the specimen.</span> 
+
+    <span class="blink_me" id="addvc_arrow1" style="position:absolute; font-size: 30px; left: 660px; top: 42px; color: ; visibility: ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+    <input type="button" id="addvc1" style="position:absolute; left: 690px; top: 50px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 2px; color: #FFF; padding-bottom: 2px;" value="&nbsp;Add&nbsp;" onclick="addvarniar1()"/>
+
+
+    <span class="blink_me" id="arvcmea_1" style="position:absolute; font-size: 30px; left: 360px; top: 280px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-up"></i></strong></span>
+
+    <span class="blink_me" id="arvcmea_2" style="position:absolute; font-size: 30px; left: 420px; top: 280px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-up"></i></strong></span>
+
+<!-- <img src="images/bare_reber_markedbrake2.png" id=" " style="position: absolute; top: 180px; left: 88px; height: 22px; width: 510px; visibility:  ;"> -->
+<img src="images/brake1.png" id="movejoin2" style="position: absolute; top: 180px; left: 88px; height: 22px; width: 562px; visibility:  ;">
+<img src="images/brake2.png" id="movejoin1" style="position: absolute; top: 180px;     left: 44px;
+    height: 22px;
+    width: 548px; visibility:  ;">
+
+<img src="images/brakeraber.jpg" id="break_img1" style="position: absolute;top: 390px;
+    left: 95px;
+    height: 130px; visibility:  ;">
+
+<img src="images/brakeraberjoin.jpg" id="break_img2" style="position: absolute;top: 390px;
+    left: 95px;
+    height: 130px; visibility: hidden;">
+
+<img src="images/varniarfull.png" id="vc11" style="position: absolute; height: 150px;
+    left: 280px;
+    top: 186px; visibility: hidden;">
+
+<img src="images/varniarfullopen.png" id="varniar2" style="position: absolute;height: 150px;
+    left: 280px;
+    top: 186px; visibility: hidden;">
+
+<img src="images/varniar.png" id="vc33" style="position: absolute; height: 150px;
+    left: 284px;
+    top: 186px; visibility: hidden;">
+
+<img src="images/varniar2.png" id="vc44" style="position: absolute; height: 133px;
+    width: 150px;
+    left: 301px;
+    top: 199px; visibility: hidden;">
+
+<img src="images/varniarfullopen.png" id="vc55" style="position: absolute; height: 90px;
+    left: 290px;
+    top: 205px;
+    transform: rotate3d(1, 1, 3, 58deg); visibility: hidden;">
+
+<img src="images/varniar.png" id="vc66" style="position: absolute;height: 150px;
+    left: 256px;
+    top: 221px;transform: rotate3d(1, 1, 3, 58deg); visibility: hidden;">
+
+<img src="images/varniar2.png" id="vc77" style="position: absolute; height: 133px;
+    width: 150px;
+    left: 355px;
+    top: 160px;transform: rotate3d(1, 1, 3, 58deg); visibility: hidden;">
+
+<img src="images/transbox.png" id="usevc_tb" style="position: absolute; height: 90px; width: 200px;
+    left: 290px;
+    top: 205px; visibility: hidden; border: 0px solid red;" onclick="usevc1()">
+
+<img src="images/transbox.png" id="usevc_tb2" style="position: absolute; height: 90px; width: 200px;
+    left: 290px;
+    top: 205px; visibility: hidden; border: 0px solid red;" onclick="usevc2()">
+
+            <span class="blink_me" id="arrowcubox3d" style="position:absolute; font-size: 30px; left: 710px; top: 510px; color: ; visibility:hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+             <img src="images/Next.png" id="nextButton3d" style="position:absolute; left:740px; top:505px; cursor:pointer; visibility:hidden;" onclick="navNext3d()" />
+
+         </div>
+
+
+        <!-- Step 3e -->
+
+        <div class="simsubscreen" id="canvas3e" style="visibility:hidden;">
+
+<!-- <strong class="incanvas" style="position: absolute; top: 20px; left: 10px;">STEP</strong> -->
+			<!-- <span class="circlebg" style="position: absolute; top: 25px; left: 60px; visibility: hidden;">&nbsp;10&nbsp;</span> -->
+			<!-- <span class="circlebg" style="position: absolute; top: 25px; left: 60px;">&nbsp;10&nbsp;</span> -->
+<p class="incanvas" style="position: absolute; top: 20px; left: 76px; font-size:15px;"><strong>Calculations</strong></p>
+
+
+<!-- <p class="incanvas" style="position: absolute; top: 90px; left: 90px; font-size:15px;"><strong> -->
+<table style="position: absolute; left: 84px; top: 80px; font-weight: bold;">
+	<tr>
+		<td style="padding: 3px;">Final gauge length L<sub>U</sub></td>
+		<td style="padding: 3px;"> = 77 mm</td>
+	</tr>
+	<tr>
+		<td style="padding: 3px;">Chosen gauge length L<sub>o</sub></td>
+		<td style="padding: 3px;"> = 60 mm Final</td>
+	</tr>	
+	<tr>
+		<td style="padding: 3px;">Final Diameter min</td>
+		<td style="padding: 3px;"> = 7.1 mm</td>
+	</tr>
+</table>
+
+
+<span style="position: absolute; top: 200px; left: 90px; font-size:15px;">
+	<strong>
+	Initial area of cross section (So) = 110.4 mm<sup>2</sup><br><br>
+	Final cross sectional area (Su) = 39.6 mm<sup>2</sup><br><br>
+</span>
+<span style="position: absolute; top: 310px; left: 90px; font-size:15px;">
+	&#37; Elongation after fracture =
+</span>
+
+<span style="position: absolute; top: 300px; left: 300px; font-size:15px;"> 
+<i>L<sub>u</sub> - L<sub>o</sub></i>
+</span>
+
+<span style="position: absolute; top: 320px; left: 315px; font-size:15px;"> 
+<i>L<sub>o</sub></i>
+</span>
+
+<span style="position: absolute; top: 310px; left: 350px; font-size:15px;">
+&#215; 100 =
+</span>
+ 
+<span style="position: absolute; top: 300px; left: 408px; font-size:15px;">
+77 - 60
+</span>
+
+<span style="position: absolute; top: 310px; left: 472px; font-size:15px;">
+&#8727; 100 = 28.33 &#37;
+</span><!---->
+
+<span style="position: absolute; top: 320px; left: 422px; font-size:15px;">
+60
+</span>
+
+	<img src="images/S0_formulaul.png" style="position: absolute; left: 293px; top: 318px; height: 6px;">
+    
+    <img src="images/S0_formulaul.png" style="position: absolute; left: 404px; top: 318px; height: 6px;">
+
+
+<!-- ================================ -->
+
+<span style="position: absolute; top: 370px; left: 90px; font-size:15px;">
+	&#37; Reduction in area =
+</span>
+
+<span style="position: absolute; top: 360px; left: 248px; font-size:15px;"> 
+<i>S<sub>o</sub> - S<sub>u</sub></i>
+</span>
+
+<span style="position: absolute; top: 380px; left: 263px; font-size:15px;"> 
+<i>S<sub>o</sub></i>
+</span>
+
+<span style="position: absolute; top: 370px; left: 305px; font-size:15px;">
+&#215; 100 =
+</span>
+ 
+<span style="position: absolute; top: 360px; left: 366px; font-size:15px;">
+110.4 - 39.6
+</span>
+
+<span style="position: absolute; top: 370px; left: 460px; font-size:15px;">
+&#8727; 100 = 64.13 &#37;
+</span><!---->
+
+<span style="position: absolute; top: 380px; left: 390px; font-size:15px;">
+110.4
+</span>
+
+
+	<img src="images/S0_formulaul.png" style="position: absolute; left: 244px; top: 378px; height: 6px;">
+	
+	<img src="images/S0_formulaul.png" style="position: absolute; left: 358px; top: 378px; height: 6px; width: 100px;">
+
+
+            <span class="blink_me" id="arrowcubox3e" style="position:absolute; font-size: 30px; left: 710px; top: 510px; color: ; visibility:;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+             <img src="images/Next.png" id="nextButton3e" style="position:absolute; left:740px; top:505px; cursor:pointer; visibility:;" onclick="navNext3e()" />
+
+         </div>
+
+
+        <!-- Step 3e -->
+
+        <div class="simsubscreen" id="canvas3f" style="visibility:hidden;">
+
+<!-- <strong class="incanvas" style="position: absolute; top: 20px; left: 10px;">STEP</strong> -->
+            <!-- <span class="circlebg" style="position: absolute; top: 25px; left: 60px; visibility: hidden;">&nbsp;10&nbsp;</span> -->
+            <!-- <span class="circlebg" style="position: absolute; top: 25px; left: 60px;">&nbsp;10&nbsp;</span> -->
+<p class="incanvas" style="position: absolute; top: 20px; left: 76px; font-size:15px;"><strong>Results</strong></p>
+
+
+<!-- <p class="incanvas" style="position: absolute; top: 90px; left: 90px; font-size:15px;"><strong> -->
+<table style="position: absolute; left: 84px; top: 80px; font-weight: bold;">
+    <tr>
+        <td style="padding: 3px; width: 150px;">Date of test:</td>
+        <td style="padding: 3px;"> <span id="date"></span></td>
+    </tr>
+    <tr>
+        <td style="padding: 3px;">Grade of steel:</td>
+        <td style="padding: 3px;"> 550 SD steel</td>
+    </tr>   
+    
+</table>    
+
+<table border="1" style="position: absolute; left: 84px; top: 150px; width: 620px; font-weight: bold;">
+    <tr>
+        <td style="padding: 3px; width: 290px;">Weight of specimen (g) </td>
+        <td style="padding: 3px; text-align: center;">698</td>
+    </tr>
+    <tr>
+        <td style="padding: 3px;">Length of specimen (mm)</td>
+        <td style="padding: 3px; text-align: center;">805</td>
+    </tr>
+    <tr>
+        <td style="padding: 3px;">Effective cross-sectional area,<br>S<sub>o</sub> (mm<sup>2</sup>)=
+            <img src="images/S0_formula5.png" style="position: relative; left: 0px; top: 0px; height: 40px;">
+        </td>
+        <td style="padding: 3px; text-align: center;">110.4</td>
+    </tr>   
+    <tr>
+        <td style="padding: 3px;">Original gauge length L (mm)= 
+            <img src="images/S0_formula3.png" style="position: relative; left: 0px; top: 0px; height: 16px;">
+        </td>
+        <td style="padding: 3px; text-align: center;">59.4</td>
+    </tr>
+    <tr>
+        <td style="padding: 3px;">Chosen gauge length, L<sub>o</sub> (mm)</td>
+        <td style="padding: 3px; text-align: center;">60</td>
+    </tr>
+    <tr>
+        <td style="padding: 3px;">Yield Stress (MPa)</td>
+        <td style="padding: 3px; text-align: center;">480.84</td>
+    </tr>
+    <tr>
+        <td style="padding: 3px;">Tensile Stress (MPa)</td>
+        <td style="padding: 3px; text-align: center;">600.62</td>
+    </tr>
+    <tr>
+        <td style="padding: 3px;">TS/YS ratio</td>
+        <td style="padding: 3px; text-align: center;">1.25</td>
+    </tr>
+    <tr>
+        <td style="padding: 3px;">Final gauge length, L<sub>U</sub> (mm)</td>
+        <td style="padding: 3px; text-align: center;">77</td>
+    </tr>
+    <tr>
+        <td style="padding: 3px;">Final diameter minimum (mm)</td>
+        <td style="padding: 3px; text-align: center;">7.1</td>
+    </tr>
+    <tr>
+        <td style="padding: 3px;">% Elongation after fracture</td>
+        <td style="padding: 3px; text-align: center;">28.33</td>
+    </tr>
+    <tr>
+        <td style="padding: 3px;">% Reduction in area</td>
+        <td style="padding: 3px; text-align: center;">64.13</td>
+    </tr>
+</table>  
+
+            <span class="blink_me" style="position:absolute; font-size: 30px; left:671px; top:515px; color: ; visibility:  ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+            <input type="button" style="position:absolute; left: 700px; top: 518px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 5px; padding-bottom: 5px; color: #FFF; visibility:  ;" value="&nbsp;Restart&nbsp;" onclick="reset()"/>
+
+</div>
+
+
+
+
+
+
+<!-- Step 2d 
+
+<div class="simsubscreen" id="canvas2e" style="visibility:visible;">
+
+
+            <strong class="incanvas" style="position: absolute; top: 20px; left: 10px;">STEP</strong>
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 60px;">&nbsp;4&nbsp;</span></br>
+<p class="incanvas" style="position: absolute; top: 20px; left: 90px; font-size:15px;"><strong>Insert the specimen in the UTM such that the load is axially applied on the specimen.</strong></p>
+ 
+	<span id="step2d_a" style="position:absolute;left: 100px; top: 55px;"><i class="fa fa-hand-o-right"></i> a) Click on the rebar to insert it in the UTM.</span>
+ 
+	<span id="step2d_b" style="position:absolute;left: 100px; top: 55px; visibility: hidden;"><i class="fa fa-hand-o-right"></i> b) Click on the marker to mark the specimen at an interval of Lo/2 = 30 mm.</span>
+
+
+    <span class="blink_me" id="arrowmarker1" style="position:absolute; font-size: 30px; left: 650px; top: 42px; color: ; visibility: ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+    <input type="button" id="addmarker1" style="position:absolute; left: 680px; top: 50px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 2px; color: #FFF; padding-bottom: 2px;" value="&nbsp;Add&nbsp;" onclick="addmarker1()"/>
+
+<img src="images/bare_raber2marked.png" id=" " style="position: absolute; top: 180px; left: 88px; height: 22px; width: 510px; visibility:  ;">
+
+<img src="images/utm.png" id=" " style="position: absolute; top: 180px; left: 88px; height: 22px; width: 510px; visibility:  ;">
+-->
+            <!--Blinking arrowcubox 
+            <span class="blink_me" id="arrowcubox2e" style="position:absolute; font-size: 30px; left: 710px; top: 510px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+             <img src="images/Next.png" id="nextButton2e" style="position:absolute; left:740px; top:505px; cursor:pointer; visibility: hidden;" onclick="navNext2()" />
+
+</div> -->
+        <!-- Step 3 -->
+
+
+
+        <div class="simsubscreen" id="canvas4" style="visibility:hidden;"></br>
+
+        <strong class="incanvas" style="position: absolute; top: 20px; left: 10px;">STEP</strong>
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 60px;">&nbsp;1&nbsp;</span></br>
+<p class="incanvas" style="position: absolute; top: 20px; left: 90px; font-size:15px;"><strong>Mark the specimen at the continuous interval of Lo/2  or Lo/3:</strong></p>
+ 
+	<span id="step3a" style="position:absolute;left: 100px; top: 55px;"><i class="fa fa-hand-o-right"></i> a) Calculate the cross-sectional area of bar using below formula.</span>
+
+    <span class="blink_me" id="addvc_arrow1" style="position:absolute; font-size: 30px; left: 660px; top: 22px; color: ; visibility: ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+    <input type="button" id="addvc1" style="position:absolute; left: 690px; top: 28px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 2px; color: #FFF; padding-bottom: 2px;" value="&nbsp;Add&nbsp;" onclick="addvarn iar1()"/>
+
+<table border="1" align="center" id="sizetable" style="position: absolute; left: 310px; top: 70px; font-weight: bold; visibility: hidden;">
+    <tr>
+        <td style="width: 100px; padding: 5px;">Sample</td>
+        <td style="width: 100px; padding: 5px;">1</td>
+    </tr>
+    <tr>
+        <td style="padding: 5px;">Length</td>
+        <td style="padding: 5px;">1 m</td>
+    </tr>
+    <tr>
+        <td style="padding: 5px;">Weight</td>
+        <td style="padding: 5px;">875.4</td>
+    </tr>
+</table>
+
+
+<img src="images/bare_raber2.png" id="reber3" style="position: absolute; height: 22px; width: 660px; top: 180px; left: 80px; visibility:  ;">
+
+<img src="images/varniarfull.png" id="varniar1" style="position: absolute; height: 150px;
+    left: 50px;
+    top: 186px; visibility: hidden;">
+
+<img src="images/varniarfullopen.png" id="varniar2" style="position: absolute;height: 150px;
+    left: 50px;
+    top: 186px; visibility: hidden;">
+
+<img src="images/varniar.png" id="varniar3" style="position: absolute; height: 150px;
+    left: 50px;
+    top: 186px; visibility: hidden;">
+
+<img src="images/varniar2.png" id="varniar4" style="position: absolute; height: 133px;
+    width: 150px;
+    left: 68px;
+    top: 199px; visibility: hidden;">
+
+<img src="images/varniarfullopen.png" id="varniar5" style="position: absolute;height: 150px;
+    left: 650px;
+    top: 186px; visibility: hidden;">
+
+<img src="images/dash.png" id="dash1" style="position: absolute; height: 22px;
+    width: 14px;
+    left: 110px;
+    top: 180px; visibility: hidden;">
+<img src="images/dash.png" id="dash2" style="position: absolute; height: 22px;
+    width: 14px;
+    left: 140px;
+    top: 180px; visibility: hidden;">
+<img src="images/dash.png" id="dash3" style="position: absolute; height: 22px;
+    width: 14px;
+    left: 170px;
+    top: 180px; visibility: hidden;">
+<img src="images/dash.png" id="dash4" style="position: absolute; height: 22px;
+    width: 14px;
+    left: 200px;
+    top: 180px; visibility: hidden;">
+<img src="images/dash.png" id="dash5" style="position: absolute; height: 22px;
+    width: 14px;
+    left: 230px;
+    top: 180px; visibility: hidden;">
+<img src="images/dash.png" id="dash6" style="position: absolute; height: 22px;
+    width: 14px;
+    left: 260px;
+    top: 180px; visibility: hidden;">
+<img src="images/dash.png" id="dash7" style="position: absolute; height: 22px;
+    width: 14px;
+    left: 290px;
+    top: 180px; visibility: hidden;">
+<img src="images/dash.png" id="dash8" style="position: absolute; height: 22px;
+    width: 14px;
+    left: 320px;
+    top: 180px; visibility: hidden;">
+<img src="images/dash.png" id="dash9" style="position: absolute; height: 22px;
+    width: 14px;
+    left: 350px;
+    top: 180px; visibility: hidden;">
+<img src="images/dash.png" id="dash10" style="position: absolute; height: 22px;
+    width: 14px;
+    left: 380px;
+    top: 180px; visibility: hidden;"> 
+<img src="images/dash.png" id="dash11" style="position: absolute; height: 22px;
+    width: 14px;
+    left: 410px;
+    top: 180px; visibility: hidden;">
+<img src="images/dash.png" id="dash12" style="position: absolute; height: 22px;
+    width: 14px;
+    left: 440px;
+    top: 180px; visibility: hidden;">
+<img src="images/dash.png" id="dash13" style="position: absolute; height: 22px;
+    width: 14px;
+    left: 470px;
+    top: 180px; visibility: hidden;">
+<img src="images/dash.png" id="dash14" style="position: absolute; height: 22px;
+    width: 14px;
+    left: 500px;
+    top: 180px; visibility: hidden;">
+<img src="images/dash.png" id="dash15" style="position: absolute; height: 22px;
+    width: 14px;
+    left: 530px;
+    top: 180px; visibility: hidden;">
+<img src="images/dash.png" id="dash16" style="position: absolute; height: 22px;
+    width: 14px;
+    left: 560px;
+    top: 180px; visibility: hidden;">
+<img src="images/dash.png" id="dash17" style="position: absolute; height: 22px;
+    width: 14px;
+    left: 590px;
+    top: 180px; visibility: hidden;">
+<img src="images/dash.png" id="dash18" style="position: absolute; height: 22px;
+    width: 14px;
+    left: 620px;
+    top: 180px; visibility: hidden;">
+<img src="images/dash.png" id="dash19" style="position: absolute; height: 22px;
+    width: 14px;
+    left: 650px;
+    top: 180px; visibility: hidden;"> 
+<img src="images/dash.png" id="dash20" style="position: absolute; height: 22px;
+    width: 14px;
+    left: 680px;
+    top: 180px; visibility: hidden;">  
+<!-- <img src="images/hand6.png" id="" style="position: absolute; height: 80px; transform: rotate(210deg); left: 200px; top: 222px;"> -->
+    <!-- left: 115px -->
+<!--<div id="transwhite" style="width: 700px; margin-right: 50px; margin-left: 50px; height: 100px;">
+
+            
+
+            <span style="position: absolute; left: 70px; top: 35px; font-size:20px; "><strong>Step 1</strong></span>
+            
+            <span id="step2a" style="position:absolute; left:73px; top:80px;"><i class="fa fa-hand-o-right"></i> a) Mark a series of overlapping gauge lengths separated by 5 or 10 mm on the specimen.
+</span>
+
+            <span id="step2b" style="position:absolute; left:73px; top:80px; visibility: hidden;"><i class="fa fa-hand-o-right"></i> b) Click on add button to bring plate in the lab.</span>
+
+            <span id="step2c" style="position:absolute; left:73px; top:80px; visibility: hidden;"><i class="fa fa-hand-o-right"></i> c) Click on piller to arrange them in right position.</span>
+
+            <span id="step2d" style="position:absolute; left:73px; top:80px; visibility: hidden;"><i class="fa fa-hand-o-right"></i> d) Click on plate to put it on the pillers.</span>
+
+           
+            
+
+
+           <input type="button" id="addpiler1" style="position:absolute; left: 620px; top: 70px; cursor:pointer; font-size: 15px; background-color: #764C28; padding-top: 2px; color: #FFF; padding-bottom: 2px;" value="&nbsp;Add&nbsp;" onclick="addpiler1()"/>
+
+           <input type="button" id="addbeam1" style="position:absolute; visibility: hidden; left: 620px; top: 70px; cursor:pointer; font-size: 15px; background-color: #764C28; padding-top: 2px; color: #FFF; padding-bottom: 2px;" value="&nbsp;Add&nbsp;" onclick="addbeam1()"/>
+        </div> -->
+            
+
+            <img src="images/piler.png" id="piler1" style="position: absolute;  visibility: hidden; height: 50px; width: 50px; left:100px; top:400px;">
+
+            <img src="images/piler.png" id="piler2" style="position: absolute;  visibility: hidden; height: 50px; width: 50px; left:160px; top:400px;">
+
+            <img src="images/transbox.png" id="transpiler1" style="position: absolute;  visibility: hidden; height: 50px; width: 50px; left:100px; top:400px;" onclick="movepiler1()"/>
+
+            <span class="blink_me" id="arrowtrans1" style="position:absolute; font-size: 30px; left:110px; top:360px; color: ; visibility:hidden ;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+            <img src="images/transbox.png" id="transpiler2" style="position: absolute;  visibility: hidden; height: 50px; width: 50px; left:160px; top:400px;" onclick="movepiler2()"/>
+
+            <span class="blink_me" id="arrowtrans2" style="position:absolute; font-size: 30px; left:170px; top:360px; color: ; visibility:hidden ;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+
+            
+
+            
+
+            <img src="images/beam.png" id="beam1" style="position: absolute; left:320px; top:400px;  visibility: hidden; height: 59px; width: 465px;">
+
+            <img src="images/transbox.png" id="transbeam1" style="position: absolute;  visibility: hidden;  height: 50px; width: 400px; left:350px; top:495px;" onclick="movebeam1()"/>
+
+            <span class="blink_me" id="arrowtrans3" style="position:absolute; font-size: 30px; left:625px; top:450px; color: ; visibility:hidden ;"><strong><i class="fa fa-arrow-down"></i></strong></span>
+
+           
+            <!--Blinking arrowcubox  -->
+            <!-- /*<span class="blink_me" id="" style="position:absolute; font-size: 30px; left: 710px; top: 510px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>*/ -->
+
+             <!-- <i class="fa fa-hand-o-right" id="" style="color: #764C28; position:absolute; left: 750px; top: 510px; font-size: 35px; visibility: hidden;" onclick="navNext3()"></i>  -->
+
+             <!--Blinking arrowcubox  -->
+            <span class="blink_me" id="arrowcubox3" style="position:absolute; font-size: 30px; left: 710px; top: 510px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+             <img src="images/Next.png" id="nextButton3" style="position:absolute; left:740px; top:505px; cursor:pointer; visibility: hidden;" onclick="navNext3()" />       
+
+            <!---img style="position:absolute; left:10px; top:480px; cursor:pointer;" id="backButton3" onClick="navBack3()" src="Back.png" /--->
+
+
+        </div>
+
+
+
+ <!-- Step 5 -->
+
+ <div class="simsubscreen" id="canvas5" style="visibility:hidden;"></br>
+
+<strong class="incanvas" style="position: absolute; top: 20px; left: 10px;">STEP</strong>
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 60px;">&nbsp;4&nbsp;</span></br>
+
+    <span id="step3a" style="position:absolute;left: 100px; top: 30px;"><i class="fa fa-hand-o-right"></i> Select a load range for the UTM that will accommodate the maximum anticipated load during the test.</br>Apply load by prescribed rate. Within the elastic range the rate of stressing shall be between 6 MPa/sec</br>and 60 MPa/sec.Within the plastic range the straining rate shall not exceed 0.0025/s for determination of yield</br>strength and 0.008/s for determination of tensile strength. </br>Remove the extensometer close to ultimate stress.
+</span>
+
+    <span id="step3a" style="position:absolute;left: 100px; top: 140px;"><i class="fa fa-hand-o-right"></i> Record simultaneously the readings of load from the UTM and elongation from the extensometer.
+</span>
+
+
+    <!-- <img src="images/grip.png" id="grip_mac" style="visibility: hidden; position: absolute; 
+    left: 100px;
+    top: 175px;
+    height: 95px;">
+
+    <img src="images/bare_reber_marked.png" id="grip_reber" style="visibility: hidden; position: absolute; left: 100px;
+    top: 170px;
+    height: 105px; ">-->
+
+    <!-- <span class="blink_me" id="fitmachine_arrow2" style="position:absolute; font-size: 30px; left: 620px; top: 200px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-left"></i></strong></span> -->
+
+    <!-- <img src="images/transbox.png" id="grip_reber_tb" style="visibility: hidden; position: absolute; left: 525px; top: 170px; height: 105px; " onclick="fitmachine()"> -->
+
+
+        
+<div style="position: absolute; left: 100px;
+    top: 170px;
+    background-color: #FFF;
+    border: 1px solid #FFF;
+    height: 325px;
+    width: 600px;">
+
+    <img src="images/graph1.png">
+</div> 
+
+             <!--Blinking arrowcubox  -->
+            <span class="blink_me" id="arrowcubox5" style="position:absolute; font-size: 30px; left: 710px; top: 510px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+             <img src="images/Next.png" id="nextButton5" style="position:absolute; left:740px; top:505px; cursor:pointer; visibility: hidden;" onclick="navNext5()" />
+
+        </div>
+
+        <!-- Step 6 -->
+
+
+
+        <div class="simsubscreen" id="canvas6" style="visibility:hidden;"> 
+ 
+<strong class="incanvas" style="position: absolute; top: 20px; left: 10px;">STEP</strong>
+
+            <span class="circlebg" style="position: absolute; top: 25px; left: 60px;">&nbsp;5&nbsp;</span></br>
+
+    <span id="step3a" style="position:absolute;left: 100px; top: 30px;"><i class="fa fa-hand-o-right"></i> After failure, fit the broken halves together and measure the final ‘gauge’ length, L<sub>f</sub>. 
+</span>
+			 
+<img src="images/reberafter3.png" style="position: absolute; left: 20px;
+    top: 140px;
+    height: 45px;">
+<img src="images/reberafter4.png" style="position: absolute; left: 195px;
+    top: 140px;
+    height: 45px;">
+
+<img src="images/varniar.png" style="position: absolute;
+    left: -26px;
+    top: 150px;
+    height: 385px;">
+
+<img src="images/varniar3.png" style="position: absolute;
+    left: 340px;
+    top: 177px;
+    height: 348px;">
+
+<img src="images/size.png" id=" " style="    position: absolute;
+    left: 60px;
+    top: 120px;
+    height: 12px;
+    width: 322px;">
+
+<strong id=" " style="visibility: ; position: absolute;
+    left: 195px;
+    top: 105px;">71.39 mm</strong>
+
+<img src="images/reberafter3.png" style="position: absolute; left: 465px;
+    top: 410px;
+    height: 50px; transform: rotate(180deg);">
+<img src="images/reberafter4.png" style="position: absolute; left: 465px;
+    top: 460px;
+    height: 50px;">
+<!-- <img src="images/broken2.jpg" style="position: absolute; left: 20px; top: 140px; height: 330px;"> -->
+
+
+             <!--Blinking arrowcubox  -->
+            <span class="blink_me" id="arrowcubox6" style="position:absolute; font-size: 30px; left: 710px; top: 510px; color: ; visibility: ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+             <img src="images/Next.png" id="nextButton6" style="position:absolute; left:740px; top:505px; cursor:pointer; visibility: ;" onclick="navNext6()" />
+
+            
+</div>
+
+
+ <!-- Step 7 -->
+
+
+    <div class="simsubscreen" id="canvas7" style="visibility:hidden;">
+
+    <strong class="incanvas" style="position: absolute; top: 20px; left: 10px;">Observations and calculations</strong>
+
+    <table style="position: absolute; left: 60px; top: 55px;">
+        <tr>
+           <td style="padding: 10px"><strong>Type of Steel</strong></td>
+           <td style="padding: 10px">Fe 500 </td>
+        </tr>
+        <tr>
+           <td style="padding: 10px"><strong>Shape and size of cross section</strong></td>
+           <td style="padding: 10px">Deformed circular, 12 mm</td>
+        </tr>
+    </table>  
+
+    <table border="1" style="position: absolute; left: 40px; top: 140px; text-align: center; font-weight: bold;">
+        <tr>
+           <td style="padding: 5px; width: 360px; text-align: left;"><strong>Specimen no.</strong></td>
+           <td style="padding: 5px; width: 90px;">1</td>
+           <td style="padding: 5px; width: 90px;">2</td>
+           <td style="padding: 5px; width: 90px;">3</td>
+           <td style="padding: 5px; width: 90px;">Average</td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Weight, w (g)</strong></td>
+           <td style="padding: 5px">875.4</td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Length, L (mm)</strong></td>
+           <td style="padding: 5px">1000</td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Effective cross section area, So = w/7.85L (mm<sup>2</sup>)</strong></td>
+           <td style="padding: 5px">111.5</td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Effective diameter, d (mm)</strong></td>
+           <td style="padding: 5px">11.92</td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Original Gauge length, Lo* = 5.65√So (mm)</strong></td>
+           <td style="padding: 5px">59.66</td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Chosen Gauge Length, Lo</strong></td>
+           <td style="padding: 5px">60</td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Yield stress (MPa)</strong></td>
+           <td style="padding: 5px">464.6</td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Tensile strength (MPa)</strong></td>
+           <td style="padding: 5px">581.6</td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>TS/YS ratio</strong></td>
+           <td style="padding: 5px">1.25</td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Gauge length after fracture, Lu (mm)</strong></td>
+           <td style="padding: 5px">73.29</td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>% Elongation after fracture, (Lu-Lo)/Lo×100</strong></td>
+           <td style="padding: 5px">22.15</td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+        </tr>
+    </table>
+ 
+
+
+              
+             <!--Blinking arrowcubox  -->
+            <span class="blink_me" id="arrowcubox7" style="position:absolute; font-size: 30px; left: 710px; top: 510px; color: ; visibility: ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+             <img src="images/Next.png" id="nextButton7" style="position:absolute; left:740px; top:505px; cursor:pointer; visibility: ;" onclick="navNext7()" />
+            <!---img style="position:absolute; left:10px; top:480px; cursor:pointer;" id="backButton3" onClick="navBack3()" src="Back.png" /--->
+
+        </div>
+
+
+ <!-- Step 8 -->
+
+
+    <div class="simsubscreen" id="canvas8" style="visibility:hidden;">
+
+    <strong class="incanvas" style="position: absolute; top: 20px; left: 10px;">Observations and calculations</strong>
+
+    <table style="position: absolute; left: 60px; top: 55px;">
+        <tr>
+           <td style="padding: 10px"><strong>Type of Steel</strong></td>
+           <td style="padding: 10px">Fe 500 </td>
+        </tr>
+        <tr>
+           <td style="padding: 10px"><strong>Shape and size of cross section</strong></td>
+           <td style="padding: 10px">Deformed circular, 12 mm</td>
+        </tr>
+    </table>  
+
+    <table border="1" style="position: absolute; left: 40px; top: 140px; text-align: center; font-weight: bold;">
+        <tr>
+           <td style="padding: 5px; width: 360px; text-align: left;"><strong>Specimen no.</strong></td>
+           <td style="padding: 5px; width: 90px;">1</td>
+           <td style="padding: 5px; width: 90px;">2</td>
+           <td style="padding: 5px; width: 90px;">3</td>
+           <td style="padding: 5px; width: 90px;">Average</td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Weight, w (g)</strong></td>
+           <td style="padding: 5px">875.4</td>
+           <td style="padding: 5px">879</td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Length, L (mm)</strong></td>
+           <td style="padding: 5px">1000</td>
+           <td style="padding: 5px">1000</td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Effective cross section area, So = w/7.85L (mm<sup>2</sup>)</strong></td>
+           <td style="padding: 5px">111.5</td>
+           <td style="padding: 5px">112.0</td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Effective diameter, d (mm)</strong></td>
+           <td style="padding: 5px">11.92</td>
+           <td style="padding: 5px">11.94</td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Original Gauge length, Lo* = 5.65√So (mm)</strong></td>
+           <td style="padding: 5px">59.66</td>
+           <td style="padding: 5px">59.78</td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Chosen Gauge Length, Lo</strong></td>
+           <td style="padding: 5px">60</td>
+           <td style="padding: 5px">60</td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Yield stress (MPa)</strong></td>
+           <td style="padding: 5px">464.6</td>
+           <td style="padding: 5px">513.7</td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Tensile strength (MPa)</strong></td>
+           <td style="padding: 5px">581.6</td>
+           <td style="padding: 5px">602.2</td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>TS/YS ratio</strong></td>
+           <td style="padding: 5px">1.25</td>
+           <td style="padding: 5px">1.17</td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Gauge length after fracture, Lu (mm)</strong></td>
+           <td style="padding: 5px">73.29</td>
+           <td style="padding: 5px">71.71</td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>% Elongation after fracture, (Lu-Lo)/Lo×100</strong></td>
+           <td style="padding: 5px">22.15</td>
+           <td style="padding: 5px">19.51</td>
+           <td style="padding: 5px"> </td>
+           <td style="padding: 5px"> </td>
+        </tr>
+    </table>
+ 
+
+
+       
+                  
+       
+             <!--Blinking arrowcubox  -->
+            <span class="blink_me" id="arrowcubox8" style="position:absolute; font-size: 30px; left: 710px; top: 510px; color: ; visibility: ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+             <img src="images/Next.png" id="nextButton8" style="position:absolute; left:740px; top:505px; cursor:pointer; visibility: ;" onclick="navNext8()" />
+            <!---img style="position:absolute; left:10px; top:480px; cursor:pointer;" id="backButton3" onClick="navBack3()" src="Back.png" /--->
+
+        </div>
+       
+
+
+ <!-- Step 9 -->
+
+
+    <div class="simsubscreen" id="canvas9" style="visibility:hidden;">
+
+    <strong class="incanvas" style="position: absolute; top: 20px; left: 10px;">Observations and calculations</strong>
+
+    <table style="position: absolute; left: 60px; top: 55px;">
+        <tr>
+           <td style="padding: 10px"><strong>Type of Steel</strong></td>
+           <td style="padding: 10px">Fe 500 </td>
+        </tr>
+        <tr>
+           <td style="padding: 10px"><strong>Shape and size of cross section</strong></td>
+           <td style="padding: 10px">Deformed circular, 12 mm</td>
+        </tr>
+    </table>  
+
+    <table border="1" style="position: absolute; left: 40px; top: 140px; text-align: center; font-weight: bold;">
+        <tr>
+           <td style="padding: 5px; width: 360px; text-align: left;"><strong>Specimen no.</strong></td>
+           <td style="padding: 5px; width: 90px;">1</td>
+           <td style="padding: 5px; width: 90px;">2</td>
+           <td style="padding: 5px; width: 90px;">3</td>
+           <td style="padding: 5px; width: 90px;">Average</td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Weight, w (g)</strong></td>
+           <td style="padding: 5px">875.4</td>
+           <td style="padding: 5px">879</td>
+           <td style="padding: 5px">873</td>
+           <td style="padding: 5px">875.8</td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Length, L (mm)</strong></td>
+           <td style="padding: 5px">1000</td>
+           <td style="padding: 5px">1000</td>
+           <td style="padding: 5px">1000</td>
+           <td style="padding: 5px"></td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Effective cross section area, So = w/7.85L (mm<sup>2</sup>)</strong></td>
+           <td style="padding: 5px">111.5</td>
+           <td style="padding: 5px">112.0</td>
+           <td style="padding: 5px">111.18</td>
+           <td style="padding: 5px"></td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Effective diameter, d (mm)</strong></td>
+           <td style="padding: 5px">11.92</td>
+           <td style="padding: 5px">11.94</td>
+           <td style="padding: 5px">11.89</td>
+           <td style="padding: 5px">11.92</td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Original Gauge length, Lo* = 5.65√So (mm)</strong></td>
+           <td style="padding: 5px">59.66</td>
+           <td style="padding: 5px">59.78</td>
+           <td style="padding: 5px">59.57</td>
+           <td style="padding: 5px"></td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Chosen Gauge Length, Lo</strong></td>
+           <td style="padding: 5px">60</td>
+           <td style="padding: 5px">60</td>
+           <td style="padding: 5px">60</td>
+           <td style="padding: 5px"></td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Yield stress (MPa)</strong></td>
+           <td style="padding: 5px">464.6</td>
+           <td style="padding: 5px">513.7</td>
+           <td style="padding: 5px">486.1</td>
+           <td style="padding: 5px">488.1</td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Tensile strength (MPa)</strong></td>
+           <td style="padding: 5px">581.6</td>
+           <td style="padding: 5px">602.2</td>
+           <td style="padding: 5px">600.4</td>
+           <td style="padding: 5px">594.7</td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>TS/YS ratio</strong></td>
+           <td style="padding: 5px">1.25</td>
+           <td style="padding: 5px">1.17</td>
+           <td style="padding: 5px">1.23</td>
+           <td style="padding: 5px">1.22</td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Gauge length after fracture, Lu (mm)</strong></td>
+           <td style="padding: 5px">73.29</td>
+           <td style="padding: 5px">71.71</td>
+           <td style="padding: 5px">72.54</td>
+           <td style="padding: 5px"></td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>% Elongation after fracture, (Lu-Lo)/Lo×100</strong></td>
+           <td style="padding: 5px">22.15</td>
+           <td style="padding: 5px">19.51</td>
+           <td style="padding: 5px">20.90</td>
+           <td style="padding: 5px">20.85</td>
+        </tr>
+    </table>
+ 
+
+
+               
+       
+             <!--Blinking arrowcubox  -->
+            <span class="blink_me" id="arrowcubox9" style="position:absolute; font-size: 30px; left: 710px; top: 510px; color: ; visibility: ;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+             <img src="images/Next.png" id="nextButton9" style="position:absolute; left:740px; top:505px; cursor:pointer; visibility: ;" onclick="navNext9()" />
+            <!---img style="position:absolute; left:10px; top:480px; cursor:pointer;" id="backButton3" onClick="navBack3()" src="Back.png" /--->
+
+        </div>
+
+   
+<!-- Step 10 -->
+
+
+    <div class="simsubscreen" id="canvas10" style="visibility:hidden;">
+
+    <strong class="incanvas" style="position: absolute; top: 20px; left: 10px;">Observations and calculations</strong>
+
+    <table style="position: absolute; left: 60px; top: 55px;">
+        <tr>
+           <td style="padding: 10px"><strong>Type of Steel</strong></td>
+           <td style="padding: 10px">Fe 500 </td>
+        </tr>
+        <tr>
+           <td style="padding: 10px"><strong>Shape and size of cross section</strong></td>
+           <td style="padding: 10px">Deformed circular, 12 mm</td>
+        </tr>
+    </table>  
+
+    <table border="1" style="position: absolute; left: 20px; top: 140px; text-align: center; font-weight: bold;">
+        <tr>
+           <td style="padding: 5px; width: 350px; text-align: left;"><strong>Specimen no.</strong></td>
+           <td style="padding: 5px; width: 80px;">1</td>
+           <td style="padding: 5px; width: 80px;">2</td>
+           <td style="padding: 5px; width: 80px;">3</td>
+           <td style="padding: 5px; width: 80px;">Average</td>
+           <td style="padding: 5px; width: 80px;">Ok/Not ok</td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Weight, w (g)</strong></td>
+           <td style="padding: 5px">875.4</td>
+           <td style="padding: 5px">879</td>
+           <td style="padding: 5px">873</td>
+           <td style="padding: 5px">875.8</td>
+           <td style="padding: 5px">Ok</td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Length, L (mm)</strong></td>
+           <td style="padding: 5px">1000</td>
+           <td style="padding: 5px">1000</td>
+           <td style="padding: 5px">1000</td>
+           <td style="padding: 5px"></td>
+           <td style="padding: 5px"></td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Effective cross section area, So = w/7.85L (mm<sup>2</sup>)</strong></td>
+           <td style="padding: 5px">111.5</td>
+           <td style="padding: 5px">112.0</td>
+           <td style="padding: 5px">111.18</td>
+           <td style="padding: 5px"></td>
+           <td style="padding: 5px"></td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Effective diameter, d (mm)</strong></td>
+           <td style="padding: 5px">11.92</td>
+           <td style="padding: 5px">11.94</td>
+           <td style="padding: 5px">11.89</td>
+           <td style="padding: 5px">11.92</td>
+           <td style="padding: 5px"></td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Original Gauge length, Lo* = 5.65√So (mm)</strong></td>
+           <td style="padding: 5px">59.66</td>
+           <td style="padding: 5px">59.78</td>
+           <td style="padding: 5px">59.57</td>
+           <td style="padding: 5px"></td>
+           <td style="padding: 5px"></td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Chosen Gauge Length, Lo</strong></td>
+           <td style="padding: 5px">60</td>
+           <td style="padding: 5px">60</td>
+           <td style="padding: 5px">60</td>
+           <td style="padding: 5px"></td>
+           <td style="padding: 5px"></td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Yield stress (MPa)</strong></td>
+           <td style="padding: 5px">464.6</td>
+           <td style="padding: 5px">513.7</td>
+           <td style="padding: 5px">486.1</td>
+           <td style="padding: 5px">488.1</td>
+           <td style="padding: 5px; color: red;">Not Ok</td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Tensile strength (MPa)</strong></td>
+           <td style="padding: 5px">581.6</td>
+           <td style="padding: 5px">602.2</td>
+           <td style="padding: 5px">600.4</td>
+           <td style="padding: 5px">594.7</td>
+           <td style="padding: 5px"></td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>TS/YS ratio</strong></td>
+           <td style="padding: 5px">1.25</td>
+           <td style="padding: 5px">1.17</td>
+           <td style="padding: 5px">1.23</td>
+           <td style="padding: 5px">1.22</td>
+           <td style="padding: 5px">Ok</td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>Gauge length after fracture, Lu (mm)</strong></td>
+           <td style="padding: 5px">73.29</td>
+           <td style="padding: 5px">71.71</td>
+           <td style="padding: 5px">72.54</td>
+           <td style="padding: 5px"></td>
+           <td style="padding: 5px"></td>
+        </tr>
+        <tr>
+           <td style="padding: 5px; text-align: left;"><strong>% Elongation after fracture, (Lu-Lo)/Lo×100</strong></td>
+           <td style="padding: 5px">22.15</td>
+           <td style="padding: 5px">19.51</td>
+           <td style="padding: 5px">20.90</td>
+           <td style="padding: 5px">20.85</td>
+           <td style="padding: 5px">Ok</td>
+        </tr>
+    </table>
+ 
+
+<span style="position: absolute; top: 520px; left: 300px;">The provided sample is <strong style="color: red;"> Fail.</strong>
+</span>
+               
+       
+             <!--Blinking arrowcubox  -->
+            <span class="blink_me" id="arrowcubox10" style="position:absolute; font-size: 30px; left: 710px; top: 510px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+             <img src="images/Next.png" id="nextButton10" style="position:absolute; left:740px; top:505px; cursor:pointer; visibility: hidden;" onclick="" />
+            <!---img style="position:absolute; left:10px; top:480px; cursor:pointer;" id="backButton3" onClick="navBack3()" src="Back.png" /--->
+
+            <span class="blink_me" id="arrowrestart" style="position:absolute; font-size: 30px; left:671px; top:515px; color: ; visibility: hidden;"><strong><i class="fa fa-arrow-right"></i></strong></span>
+
+            <input type="button" id="resetbutton" style="position:absolute; left: 700px; top: 518px; cursor:pointer; font-size: 15px; background-color: #2150a0; padding-top: 5px; padding-bottom: 5px; color: #FFF; visibility: hidden;" value="&nbsp;Restart&nbsp;" onclick="reset()"/>
+
+        </div>
+
+
+    </div><!--- First Div---->
+
+<!---<div style="text-align: center; font-size: 11px; width:800px; border:1px solid #000; position: relative; border-top:none; color: #FFF; background-color: #000;">Developed by @ <a href="#" ><strong style="color: #FFF; font-size: 12px;">Virtuality India Pvt.Ltd</strong></a></div>
+</body>
+i class="fa fa-arrow-right" style="color: #82C91E"></i>
+<i class="fa fa-arrow-left" style="color: #82C91E"></i>
+<i class="fa fa-arrow-down" style="color: #82C91E"></i>
+<i class="fa fa-arrow-up" style="color: #82C91E"></i>
+<i class="fa fa-chevron-circle-right" style="color: #82C91E"></i>
+
+
+<i class="fas fa-hand-point-right" style="color: #82C91E"></i--->
+</td></tr>
+</table>
 </body>
 </html>
