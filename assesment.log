@@ -1,0 +1,15 @@
+=/posttest.json
+{
+  _: [],
+  f: [
+    '/home/runner/work/exp-tensile-test-iitd/exp-tensile-test-iitd/experiment/posttest.json'
+  ],
+  files: [
+    '/home/runner/work/exp-tensile-test-iitd/exp-tensile-test-iitd/experiment/posttest.json'
+  ],
+  c: 'assessment',
+  contentTypes: 'assessment',
+  'content-types': 'assessment',
+  '$0': 'validate'
+}
+Validated true
